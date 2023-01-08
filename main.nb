@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     34023,        826]
-NotebookOptionsPosition[     31670,        773]
-NotebookOutlinePosition[     32215,        792]
-CellTagsIndexPosition[     32172,        789]
+NotebookDataLength[     40473,        963]
+NotebookOptionsPosition[     38139,        911]
+NotebookOutlinePosition[     38664,        929]
+CellTagsIndexPosition[     38621,        926]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -432,6 +432,8 @@ Cell[BoxData[
       RowBox[{"Print", " ", "Field"}], "*)"}], "\[IndentingNewLine]", "\t", 
      RowBox[{"Column", "[", 
       RowBox[{"{", "\n", "\t\t", 
+       RowBox[{"(*", 
+        RowBox[{"Phase", " ", "Potrait"}], "*)"}], "\n", "\t\t", 
        RowBox[{
         RowBox[{"Style", "[", 
          RowBox[{"\"\<Phase Potrait\>\"", ",", "18", ",", "Bold"}], "]"}], 
@@ -452,31 +454,112 @@ Cell[BoxData[
           RowBox[{"StreamPoints", "->", "Fine"}], ",", " ", 
           RowBox[{"ImageSize", " ", "->", " ", 
            RowBox[{"72", " ", "5"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
-        "\t\t", 
+        "\t\t", "\n", "\t\t", "\n", "\t\t", 
+        RowBox[{"(*", "System", "*)"}], "\n", "\t\t", 
         RowBox[{"Style", "[", 
          RowBox[{"\"\<System\>\"", ",", "18", ",", "Bold"}], "]"}], ",", "\n",
          "\t\t", 
-        RowBox[{"\"\<The Entered System:\>\"", " ", 
-         RowBox[{"MatrixForm", "[", 
-          RowBox[{"F", "[", 
-           RowBox[{"x", ",", "y"}], "]"}], "]"}]}], ",", "\n", "\t\t", 
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{"\"\<The Entered System: \>\"", ",", " ", 
+           RowBox[{"MatrixForm", "[", 
+            RowBox[{"{", 
+             RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SuperscriptBox[
+StyleBox[\"x\", \"TI\"], \"\[Prime]\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"x'\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", ",", 
+              "\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+SuperscriptBox[
+StyleBox[\"y\", \"TI\"], \"\[Prime]\"], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"y'\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\""}], "}"}], "]"}], ",", 
+           "\"\<=\>\"", ",", 
+           RowBox[{"MatrixForm", "[", 
+            RowBox[{"{", 
+             RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{
+StyleBox[\"f\", \"TI\"], \"(\", 
+RowBox[{
+StyleBox[\"x\", \"TI\"], \",\", 
+StyleBox[\"y\", \"TI\"]}], \")\"}], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"f(x,y)\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)\
+\>\"", ",", "\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{
+StyleBox[\"g\", \"TI\"], \"(\", 
+RowBox[{
+StyleBox[\"x\", \"TI\"], \",\", 
+StyleBox[\"y\", \"TI\"]}], \")\"}], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"g(x,y)\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)\
+\>\""}], "}"}], "]"}], ",", "\"\<=\>\"", ",", 
+           RowBox[{"MatrixForm", "[", 
+            RowBox[{"F", "[", 
+             RowBox[{"x", ",", "y"}], "]"}], "]"}]}], "}"}], "]"}], ",", "\n",
+         "\t\t", "\n", "\t\t", "\n", "\t\t", 
+        RowBox[{"(*", "Jacobian", "*)"}], "\n", "\t\t", 
         RowBox[{"Style", "[", 
          RowBox[{"\"\<Jacobian\>\"", ",", "18", ",", "Bold"}], "]"}], ",", 
         "\[IndentingNewLine]", "\t\t", 
-        RowBox[{"\"\<The Jacobian of the system: \>\"", 
-         RowBox[{"MatrixForm", "[", 
-          RowBox[{"J", "[", 
-           RowBox[{"x", ",", "y"}], "]"}], "]"}]}], ",", 
-        "\[IndentingNewLine]", "\t\t", 
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{
+          "\"\<The Jacobian of the system: \>\"", ",", 
+           "\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{
+StyleBox[\"J\", \"TI\"], 
+RowBox[{\"(\", 
+RowBox[{
+StyleBox[\"x\", \"TI\"], \",\", 
+StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[LongEqual]\"}], TraditionalForm], \
+\"errors\" -> {}, \"input\" -> \"J (x, y) =\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", ",", 
+           RowBox[{"MatrixForm", "[", 
+            RowBox[{"J", "[", 
+             RowBox[{"x", ",", "y"}], "]"}], "]"}]}], "}"}], "]"}], ",", 
+        "\[IndentingNewLine]", "\t\t", "\n", "\t\t", 
+        RowBox[{"(*", 
+         RowBox[{"Fixed", " ", "Points"}], "*)"}], "\n", "\t\t", 
         RowBox[{"Style", "[", 
          RowBox[{"\"\<Fixed Points\>\"", ",", "18", ",", "Bold"}], "]"}], ",",
-         "\n", "\t\t", "\"\<Fixed Points: \>\"", ",", "\[IndentingNewLine]", 
-        "        ", "fpList", ",", "\[IndentingNewLine]", "        ", 
-        "\"\<Systems: \>\"", ",", "\[IndentingNewLine]", "\t\t", "systems"}], 
-       "\[IndentingNewLine]", "\t\t  ", "}"}], "]"}]}], "\[IndentingNewLine]",
-     "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", 
+         "\n", "\t\t", 
+        RowBox[{"Row", "[", 
+         RowBox[{"{", 
+          RowBox[{"\"\<There are \>\"", ",", " ", 
+           RowBox[{"Length", "[", "fpList", "]"}], ",", " ", 
+           "\"\< fixed points:\>\"", ",", 
+           "\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{
+RowBox[{\"(\", 
+RowBox[{
+StyleBox[\"x\", \"TI\"], \",\", 
+StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[Element]\"}], TraditionalForm], \
+\"errors\" -> {}, \"input\" -> \"(x,y)\\\\in\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\) \>\"", ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"\"\<(\>\"", "<>", 
+              RowBox[{"ToString", "[", 
+               RowBox[{
+                RowBox[{"#", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], "[", 
+                RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", "\"\<,\>\"", "<>", 
+              RowBox[{"ToString", "[", 
+               RowBox[{
+                RowBox[{"#", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}], "[", 
+                RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", "\"\<)\>\""}], 
+             " ", "&"}], " ", "/@", "fpList"}]}], "}"}], "]"}], ",", "\n", 
+        "        ", "\n", "        ", "\n", "        ", 
+        RowBox[{"(*", 
+         RowBox[{"Local", " ", "Behavior"}], "*)"}], "\n", "        ", 
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<Local Behavior\>\"", ",", "18", ",", "Bold"}], "]"}], 
+        ",", "\[IndentingNewLine]", "        ", "\"\<Systems: \>\"", ",", 
+        "\[IndentingNewLine]", "\t\t", "systems"}], "\[IndentingNewLine]", 
+       "\t\t  ", "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", 
     RowBox[{"(*", 
-     RowBox[{"Input", " ", "Fields"}], "*)"}], ",", " ", "\n", "\t", 
+     RowBox[{"Input", " ", "Fields"}], "*)"}], "\n", "\t", 
     RowBox[{"Style", "[", 
      RowBox[{"\"\<Dynamical System\>\"", ",", "Large", ",", "Bold"}], "]"}], 
     ",", "\n", "\t", 
@@ -568,8 +651,15 @@ StyleBox[\"y\", \"TI\"]}], \")\"}]}], TraditionalForm], \"errors\" -> {}, \
    3.882204581308321*^9}, {3.8822046113427505`*^9, 3.882204614567154*^9}, 
    3.882204676323223*^9, {3.88220472041401*^9, 3.882204727062793*^9}, {
    3.882204782861046*^9, 3.882204828520796*^9}, {3.8822048813752985`*^9, 
-   3.882204886937792*^9}},
- CellLabel->"In[47]:=",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
+   3.882204886937792*^9}, {3.8822078210475063`*^9, 3.8822079057765594`*^9}, {
+   3.8822079475478334`*^9, 3.882207987792189*^9}, {3.882208018387862*^9, 
+   3.8822081266724195`*^9}, {3.8822081923999047`*^9, 3.882208310138936*^9}, {
+   3.8822083506517143`*^9, 3.8822083930124674`*^9}, {3.882208748476143*^9, 
+   3.88220874871052*^9}, {3.882209472096989*^9, 3.882209486077919*^9}, {
+   3.8822095606551933`*^9, 3.88220959492212*^9}, {3.8822097656967583`*^9, 
+   3.882209854988244*^9}},
+ CellLabel->
+  "In[120]:=",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
 
 Cell[BoxData[
  TagBox[
@@ -609,7 +699,7 @@ $CellContext`y)}}, {{
        Grid[{{
           Manipulate`Place[1]}, {
           Manipulate`Place[2]}}]], Manipulate`Dump`ThisIsNotAControl}}, 
-    Typeset`size$$ = {708., {334.63403320312506`, 340.36596679687506`}}, 
+    Typeset`size$$ = {708., {342.63403320312506`, 348.36596679687506`}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      2, StandardForm, 
@@ -675,13 +765,55 @@ $CellContext`es}]; Null]; Column[{
            $CellContext`F[$CellContext`x, $CellContext`y], {$CellContext`x, \
 -10, 10}, {$CellContext`y, -10, 10}, StreamColorFunction -> "Rainbow", Axes -> 
            True, Frame -> False, StreamPoints -> Fine, ImageSize -> 72 5], 
-          Style["System", 18, Bold], "The Entered System:" MatrixForm[
-            $CellContext`F[$CellContext`x, $CellContext`y]], 
-          Style["Jacobian", 18, Bold], "The Jacobian of the system: " 
-          MatrixForm[
-            $CellContext`J[$CellContext`x, $CellContext`y]], 
+          Style["System", 18, Bold], 
+          Row[{"The Entered System: ", 
+            
+            MatrixForm[{
+             "\!\(\*TemplateBox[<|\"boxes\" -> \
+FormBox[SuperscriptBox[StyleBox[\"x\", \"TI\"], \"\[Prime]\"], \
+TraditionalForm], \"errors\" -> {}, \"input\" -> \"x'\", \"state\" -> \"Boxes\
+\"|>,\"TeXAssistantTemplate\"]\)", 
+              "\!\(\*TemplateBox[<|\"boxes\" -> \
+FormBox[SuperscriptBox[StyleBox[\"y\", \"TI\"], \"\[Prime]\"], \
+TraditionalForm], \"errors\" -> {}, \"input\" -> \"y'\", \"state\" -> \"Boxes\
+\"|>,\"TeXAssistantTemplate\"]\)"}], "=", 
+            
+            MatrixForm[{
+             "\!\(\*TemplateBox[<|\"boxes\" -> \
+FormBox[RowBox[{StyleBox[\"f\", \"TI\"], \"(\", RowBox[{StyleBox[\"x\", \
+\"TI\"], \",\", StyleBox[\"y\", \"TI\"]}], \")\"}], TraditionalForm], \
+\"errors\" -> {}, \"input\" -> \"f(x,y)\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 
+              "\!\(\*TemplateBox[<|\"boxes\" -> \
+FormBox[RowBox[{StyleBox[\"g\", \"TI\"], \"(\", RowBox[{StyleBox[\"x\", \
+\"TI\"], \",\", StyleBox[\"y\", \"TI\"]}], \")\"}], TraditionalForm], \
+\"errors\" -> {}, \"input\" -> \"g(x,y)\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)"}], "=", 
+            MatrixForm[
+             $CellContext`F[$CellContext`x, $CellContext`y]]}], 
+          Style["Jacobian", 18, Bold], 
+          
+          Row[{"The Jacobian of the system: ", 
+            "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{StyleBox[\"J\", \
+\"TI\"], RowBox[{\"(\", RowBox[{StyleBox[\"x\", \"TI\"], \",\", \
+StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[LongEqual]\"}], TraditionalForm], \
+\"errors\" -> {}, \"input\" -> \"J (x, y) =\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 
+            MatrixForm[
+             $CellContext`J[$CellContext`x, $CellContext`y]]}], 
           Style["Fixed Points", 18, Bold], 
-          "Fixed Points: ", $CellContext`fpList, 
+          Row[{"There are ", 
+            Length[$CellContext`fpList], " fixed points:", 
+            "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{RowBox[{\"(\", \
+RowBox[{StyleBox[\"x\", \"TI\"], \",\", StyleBox[\"y\", \"TI\"]}], \")\"}], \
+\"\[Element]\"}], TraditionalForm], \"errors\" -> {}, \"input\" -> \
+\"(x,y)\\\\in\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\) ", 
+            Map["(" <> ToString[
+               Part[
+                Part[#, 1], 2]] <> "," <> ToString[
+               Part[
+                Part[#, 2], 2]] <> ")"& , $CellContext`fpList]}], 
+          Style["Local Behavior", 18, Bold], 
           "Systems: ", $CellContext`systems}]), "Specifications" :> {
         Style["Dynamical System", Large, Bold], 
         Style[
@@ -710,7 +842,7 @@ $CellContext`y)}, ControlType -> InputField, ImageSize -> Small,
         Grid[{{
            Manipulate`Place[1]}, {
            Manipulate`Place[2]}}]}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{756., {419.134033203125, 424.865966796875}},
+     ImageSizeCache->{756., {427.134033203125, 432.865966796875}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -731,8 +863,14 @@ $CellContext`y)}, ControlType -> InputField, ImageSize -> Small,
    3.882204178519944*^9, {3.88220439826812*^9, 3.882204405372372*^9}, {
    3.882204465941512*^9, 3.8822044836498966`*^9}, {3.8822046427136126`*^9, 
    3.882204689208839*^9}, {3.882204722937495*^9, 3.8822047281565437`*^9}, {
-   3.8822047883204184`*^9, 3.882204829395735*^9}, 3.882204891695283*^9},
- CellLabel->"Out[47]=",ExpressionUUID->"f6e529cc-6f56-4ab3-b0b0-499b45c1a57c"]
+   3.8822047883204184`*^9, 3.882204829395735*^9}, 3.882204891695283*^9, {
+   3.882208034395752*^9, 3.882208060249153*^9}, {3.882208111167313*^9, 
+   3.8822081278672223`*^9}, 3.882208240351897*^9, {3.882208315349798*^9, 
+   3.8822083519017253`*^9}, 3.882208397686474*^9, {3.882209475100421*^9, 
+   3.8822094869841733`*^9}, {3.882209569887741*^9, 3.882209595726578*^9}, {
+   3.882209800808319*^9, 3.88220982337504*^9}, 3.8822098568296223`*^9},
+ CellLabel->
+  "Out[120]=",ExpressionUUID->"886526ba-b7e2-4c46-9df7-e96983353ada"]
 }, Open  ]]
 }, Open  ]],
 
@@ -771,8 +909,7 @@ Cell[BoxData[
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{Full, Full},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowMargins->{{-5.5, Automatic}, {Automatic, -5.5}},
 SpellingDictionaries->{"CorrectWords"->{
  "Representer\[CloseCurlyQuote]s", "Representer", "Osorio", "pportrait"}},
 Magnification:>1. Inherited,
@@ -815,15 +952,15 @@ Cell[10625, 285, 153, 3, 67, "Section",ExpressionUUID->"9efded44-15c8-43d3-a7a5-
 Cell[CellGroupData[{
 Cell[10803, 292, 177, 3, 54, "Subsection",ExpressionUUID->"4cd0ee05-51a4-4652-896f-1cbf8a108cf7"],
 Cell[CellGroupData[{
-Cell[11005, 299, 11094, 272, 700, "Code",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
-Cell[22102, 573, 8371, 161, 863, "Output",ExpressionUUID->"f6e529cc-6f56-4ab3-b0b0-499b45c1a57c"]
+Cell[11005, 299, 15074, 362, 927, "Code",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
+Cell[26082, 663, 10860, 209, 879, "Output",ExpressionUUID->"886526ba-b7e2-4c46-9df7-e96983353ada"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[30522, 740, 163, 3, 54, "Subsection",ExpressionUUID->"8db4dca2-4fee-42ba-880a-212cf85fa7df"],
+Cell[36991, 878, 163, 3, 54, "Subsection",ExpressionUUID->"8db4dca2-4fee-42ba-880a-212cf85fa7df"],
 Cell[CellGroupData[{
-Cell[30710, 747, 337, 6, 50, "Code",ExpressionUUID->"f31a03e1-f17a-47fe-a50f-518c2e78329c"],
-Cell[31050, 755, 568, 12, 35, "Output",ExpressionUUID->"eb6400a1-f789-4800-ac63-4e7572643632"]
+Cell[37179, 885, 337, 6, 50, "Code",ExpressionUUID->"f31a03e1-f17a-47fe-a50f-518c2e78329c"],
+Cell[37519, 893, 568, 12, 35, "Output",ExpressionUUID->"eb6400a1-f789-4800-ac63-4e7572643632"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
