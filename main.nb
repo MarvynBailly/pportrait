@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     22958,        600]
-NotebookOptionsPosition[     20729,        550]
-NotebookOutlinePosition[     21270,        569]
-CellTagsIndexPosition[     21227,        566]
+NotebookDataLength[     34023,        826]
+NotebookOptionsPosition[     31670,        773]
+NotebookOutlinePosition[     32215,        792]
+CellTagsIndexPosition[     32172,        789]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,12 +26,12 @@ Cell["pportrait", "Title",
 a307003b2b8b"],
 
 Cell[TextData[{
- "By Marvin & Juan \n",
+ "By Marvyn & Juan \n",
  StyleBox["Department of Applied Mathematics, UW", "Author"]
 }], "Subtitle",
  CellChangeTimes->{{3.8821424419179*^9, 3.882142454282632*^9}, {
-  3.882143098860895*^9, 
-  3.882143115891355*^9}},ExpressionUUID->"6bfeb5f5-1c54-4901-87ea-\
+  3.882143098860895*^9, 3.882143115891355*^9}, {3.8822010659266925`*^9, 
+  3.8822010659782405`*^9}},ExpressionUUID->"6bfeb5f5-1c54-4901-87ea-\
 59d29ed5cee1"],
 
 Cell[CellGroupData[{
@@ -51,8 +51,8 @@ points of the system and their classifications.\n- Phase portrait.\n\nThe \
 application is embedded in a HTML website. "
 }], "Text",
  CellChangeTimes->{{3.882142484506658*^9, 3.88214267589585*^9}, {
-  3.88214271896544*^9, 
-  3.882142921365891*^9}},ExpressionUUID->"578e83f7-6a79-4a89-a23f-\
+  3.88214271896544*^9, 3.882142921365891*^9}, {3.8822049686776996`*^9, 
+  3.882204969818322*^9}},ExpressionUUID->"578e83f7-6a79-4a89-a23f-\
 5ef478ba7f5a"]
 }, Open  ]],
 
@@ -116,9 +116,9 @@ Cell[BoxData[
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`a$$], 1, 4}, {
-      Hold[$CellContext`b$$], 0, 10}}, Typeset`size$$ = {720., {208., 218.}}, 
-    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
-    
+      Hold[$CellContext`b$$], 0, 10}}, Typeset`size$$ = {
+    360., {104., 109.37589556212379`}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`a$$ = 1, $CellContext`b$$ = 0}, 
@@ -132,7 +132,7 @@ Cell[BoxData[
 {$CellContext`x, 0, 6}], 
       "Specifications" :> {{$CellContext`a$$, 1, 4}, {$CellContext`b$$, 0, 
          10}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{804., {322., 334.}},
+     ImageSizeCache->{629., {135.134033203125, 140.865966796875}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -295,210 +295,256 @@ Cell["Create interactive application", "Subsection",
   3.882143690376828*^9}},ExpressionUUID->"4cd0ee05-51a4-4652-896f-\
 1cbf8a108cf7"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
- RowBox[{
-  RowBox[{"pportrait", " ", "=", " ", 
-   RowBox[{"Manipulate", "[", "\n", "\t", 
-    RowBox[{"(*", 
-     RowBox[{"Functionalities", " ", "and", " ", "calculations"}], "*)"}], 
-    "\[IndentingNewLine]", "\t", 
+ RowBox[{"pportrait", " ", "=", " ", 
+  RowBox[{"Manipulate", "[", "\n", "\t", 
+   RowBox[{"(*", 
+    RowBox[{"Functionalities", " ", "and", " ", "calculations"}], "*)"}], 
+   "\[IndentingNewLine]", "\t", 
+   RowBox[{
     RowBox[{
      RowBox[{
-      RowBox[{
-       RowBox[{"f1", "[", 
-        RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", "f"}], ";", 
-      "\[IndentingNewLine]", "\t", 
-      RowBox[{
-       RowBox[{"f2", "[", 
-        RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", "g"}], ";", 
-      "\[IndentingNewLine]", "\t", 
-      RowBox[{
-       RowBox[{"F", "[", 
-        RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"f1", "[", 
-          RowBox[{"x", ",", "y"}], "]"}], ",", 
-         RowBox[{"f2", "[", 
-          RowBox[{"x", ",", "y"}], "]"}]}], "}"}]}], ";", 
-      "\[IndentingNewLine]", "\t", 
-      RowBox[{
-       RowBox[{"J", "[", 
-        RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"D", "[", 
-            RowBox[{
-             RowBox[{"f1", "[", 
-              RowBox[{"x", ",", "y"}], "]"}], ",", "x"}], "]"}], ",", 
-           RowBox[{"D", "[", 
-            RowBox[{
-             RowBox[{"f1", "[", 
-              RowBox[{"x", ",", "y"}], "]"}], ",", "y"}], "]"}]}], "}"}], ",", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"D", "[", 
-            RowBox[{
-             RowBox[{"f2", "[", 
-              RowBox[{"x", ",", "y"}], "]"}], ",", "x"}], "]"}], ",", 
-           RowBox[{"D", "[", 
-            RowBox[{
-             RowBox[{"f2", "[", 
-              RowBox[{"x", ",", "y"}], "]"}], ",", "y"}], "]"}]}], "}"}]}], 
-        "}"}]}], ";", "\[IndentingNewLine]", "\t", 
-      RowBox[{"fpList", " ", "=", " ", 
-       RowBox[{"Solve", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{
-            RowBox[{
-             RowBox[{"F", "[", 
-              RowBox[{"x", ",", "y"}], "]"}], "[", 
-             RowBox[{"[", "1", "]"}], "]"}], " ", "==", " ", "0"}], ",", " ", 
-           
-           RowBox[{
-            RowBox[{
-             RowBox[{"F", "[", 
-              RowBox[{"x", ",", "y"}], "]"}], "[", 
-             RowBox[{"[", "2", "]"}], "]"}], " ", "==", " ", "0"}]}], "}"}], 
-         ",", 
-         RowBox[{"{", 
-          RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", "\t", 
-      RowBox[{"systems", "=", 
-       RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", "\t", 
-      RowBox[{"For", "[", 
+      RowBox[{"f1", "[", 
+       RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", "f"}], ";", 
+     "\[IndentingNewLine]", "\t", 
+     RowBox[{
+      RowBox[{"f2", "[", 
+       RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", "g"}], ";", 
+     "\[IndentingNewLine]", "\t", 
+     RowBox[{
+      RowBox[{"F", "[", 
+       RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", 
+      RowBox[{"{", 
        RowBox[{
-        RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
-        RowBox[{"i", " ", "<=", " ", 
-         RowBox[{"Length", "[", "fpList", "]"}]}], ",", 
-        RowBox[{"i", "++"}], ",", "\n", "\t\t", 
-        RowBox[{
-         RowBox[{"fp", " ", "=", " ", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{
-             RowBox[{
-              RowBox[{"fpList", "[", 
-               RowBox[{"[", "i", "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], "[", 
-             RowBox[{"[", "2", "]"}], "]"}], ",", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"fpList", "[", 
-               RowBox[{"[", "i", "]"}], "]"}], "[", 
-              RowBox[{"[", "2", "]"}], "]"}], "[", 
-             RowBox[{"[", "2", "]"}], "]"}]}], "}"}]}], ";", "\n", "\t\t", 
-         RowBox[{"j", " ", "=", " ", 
-          RowBox[{"MatrixForm", "[", 
-           RowBox[{"J", "[", 
-            RowBox[{
-             RowBox[{"fp", "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", 
-             RowBox[{"fp", "[", 
-              RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "]"}]}], ";", "\n", 
-         "\t\t", 
-         RowBox[{"(*", 
-          RowBox[{
-           RowBox[{"Print", "[", 
-            RowBox[{"CharacteristicPolynomial", "[", 
-             RowBox[{
-              RowBox[{"J", "[", 
-               RowBox[{
-                RowBox[{"fp", "[", 
-                 RowBox[{"[", "1", "]"}], "]"}], ",", 
-                RowBox[{"fp", "[", 
-                 RowBox[{"[", "2", "]"}], "]"}]}], "]"}], ",", "\[Lambda]"}], 
-             "]"}], "]"}], ";"}], "*)"}], "\n", "\t\t", 
-         RowBox[{"es", " ", "=", " ", 
-          RowBox[{"Eigensystem", "[", 
-           RowBox[{"J", "[", 
-            RowBox[{
-             RowBox[{"fp", "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", 
-             RowBox[{"fp", "[", 
-              RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "]"}]}], ";", 
-         "\[IndentingNewLine]", "\t\t", 
-         RowBox[{"AppendTo", "[", 
-          RowBox[{"systems", " ", ",", 
-           RowBox[{"{", 
-            RowBox[{"fp", ",", "j", ",", "es"}], "}"}]}], "]"}], ";"}]}], 
-       "\[IndentingNewLine]", "\t\t", "]"}], ";", "\[IndentingNewLine]", 
-      "\[IndentingNewLine]", "\t", 
-      RowBox[{"(*", 
-       RowBox[{"Print", " ", "Field"}], "*)"}], "\[IndentingNewLine]", "\t", 
-      RowBox[{"Column", "[", 
-       RowBox[{"{", "\[IndentingNewLine]", "\t", 
-        RowBox[{
-         RowBox[{"StreamPlot", "[", 
-          RowBox[{
-           RowBox[{"F", "[", 
-            RowBox[{"x", ",", "y"}], "]"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"x", ",", 
-             RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"y", ",", 
-             RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
-           RowBox[{"StreamColorFunction", "->", "\"\<Rainbow\>\""}], ",", 
-           RowBox[{"Axes", " ", "->", " ", "True"}], ",", 
-           RowBox[{"Frame", "->", "False"}], ",", " ", 
-           RowBox[{"StreamPoints", "->", "Fine"}], ",", " ", 
-           RowBox[{"ImageSize", " ", "->", " ", 
-            RowBox[{"72", " ", "5"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
-         "\t\t", 
-         RowBox[{"\"\<System: \>\"", 
-          RowBox[{"MatrixForm", "[", 
-           RowBox[{"F", "[", 
-            RowBox[{"x", ",", "y"}], "]"}], "]"}]}], ",", 
-         "\[IndentingNewLine]", "\t\t", 
-         RowBox[{"\"\<Jacobian: \>\"", 
-          RowBox[{"MatrixForm", "[", 
-           RowBox[{"J", "[", 
-            RowBox[{"x", ",", "y"}], "]"}], "]"}]}], ",", 
-         "\[IndentingNewLine]", "\t\t", "\"\<Fixed Points: \>\"", ",", 
-         "\[IndentingNewLine]", "        ", "fpList", ",", 
-         "\[IndentingNewLine]", "        ", "\"\<Systems: \>\"", ",", 
-         "\[IndentingNewLine]", "\t\t", "systems"}], "\[IndentingNewLine]", 
-        "\t\t  ", "}"}], "]"}]}], "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", 
-     RowBox[{"(*", 
-      RowBox[{"Input", " ", "Fields"}], "*)"}], ",", " ", "\n", "\t", 
-     RowBox[{"Style", "[", 
-      RowBox[{"\"\<Dynamical System\>\"", ",", "12", ",", "Bold"}], "]"}], 
-     ",", "\n", "\t", 
-     RowBox[{"Grid", "[", 
+        RowBox[{"f1", "[", 
+         RowBox[{"x", ",", "y"}], "]"}], ",", 
+        RowBox[{"f2", "[", 
+         RowBox[{"x", ",", "y"}], "]"}]}], "}"}]}], ";", 
+     "\[IndentingNewLine]", "\t", 
+     RowBox[{
+      RowBox[{"J", "[", 
+       RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", 
       RowBox[{"{", 
        RowBox[{
         RowBox[{"{", 
-         RowBox[{"Control", "@", 
-          RowBox[{"{", 
+         RowBox[{
+          RowBox[{"D", "[", 
            RowBox[{
-            RowBox[{"{", 
-             RowBox[{"f", ",", 
-              RowBox[{
-               RowBox[{"\[Minus]", 
-                RowBox[{"(", 
-                 RowBox[{"x", "\[Minus]", "y"}], ")"}]}], 
-               RowBox[{"(", 
-                RowBox[{"1", "\[Minus]", "x", "\[Minus]", "y"}], ")"}]}]}], 
-             "}"}], ",", "InputField", ",", 
-            RowBox[{"ImageSize", "->", "Small"}]}], "}"}]}], "}"}], ",", 
+            RowBox[{"f1", "[", 
+             RowBox[{"x", ",", "y"}], "]"}], ",", "x"}], "]"}], ",", 
+          RowBox[{"D", "[", 
+           RowBox[{
+            RowBox[{"f1", "[", 
+             RowBox[{"x", ",", "y"}], "]"}], ",", "y"}], "]"}]}], "}"}], ",", 
         RowBox[{"{", 
-         RowBox[{"Control", "@", 
-          RowBox[{"{", 
+         RowBox[{
+          RowBox[{"D", "[", 
            RowBox[{
-            RowBox[{"{", 
-             RowBox[{"g", ",", 
-              RowBox[{"x", 
+            RowBox[{"f2", "[", 
+             RowBox[{"x", ",", "y"}], "]"}], ",", "x"}], "]"}], ",", 
+          RowBox[{"D", "[", 
+           RowBox[{
+            RowBox[{"f2", "[", 
+             RowBox[{"x", ",", "y"}], "]"}], ",", "y"}], "]"}]}], "}"}]}], 
+       "}"}]}], ";", "\[IndentingNewLine]", "\t", 
+     RowBox[{"fpList", " ", "=", " ", 
+      RowBox[{"Solve", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"F", "[", 
+             RowBox[{"x", ",", "y"}], "]"}], "[", 
+            RowBox[{"[", "1", "]"}], "]"}], " ", "==", " ", "0"}], ",", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"F", "[", 
+             RowBox[{"x", ",", "y"}], "]"}], "[", 
+            RowBox[{"[", "2", "]"}], "]"}], " ", "==", " ", "0"}]}], "}"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", "\t", 
+     RowBox[{"systems", "=", 
+      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", "\t", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
+       RowBox[{"i", " ", "<=", " ", 
+        RowBox[{"Length", "[", "fpList", "]"}]}], ",", 
+       RowBox[{"i", "++"}], ",", "\n", "\t\t", 
+       RowBox[{
+        RowBox[{"fp", " ", "=", " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"fpList", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "[", 
+            RowBox[{"[", "2", "]"}], "]"}], ",", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"fpList", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], "}"}]}], ";", "\n", "\t\t", 
+        RowBox[{"j", " ", "=", " ", 
+         RowBox[{"MatrixForm", "[", 
+          RowBox[{"J", "[", 
+           RowBox[{
+            RowBox[{"fp", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", 
+            RowBox[{"fp", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "]"}]}], ";", "\n", 
+        "\t\t", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"Print", "[", 
+           RowBox[{"CharacteristicPolynomial", "[", 
+            RowBox[{
+             RowBox[{"J", "[", 
+              RowBox[{
+               RowBox[{"fp", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", 
+               RowBox[{"fp", "[", 
+                RowBox[{"[", "2", "]"}], "]"}]}], "]"}], ",", "\[Lambda]"}], 
+            "]"}], "]"}], ";"}], "*)"}], "\n", "\t\t", 
+        RowBox[{"es", " ", "=", " ", 
+         RowBox[{"Eigensystem", "[", 
+          RowBox[{"J", "[", 
+           RowBox[{
+            RowBox[{"fp", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", 
+            RowBox[{"fp", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", "\t\t", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"systems", " ", ",", 
+          RowBox[{"{", 
+           RowBox[{"fp", ",", "j", ",", "es"}], "}"}]}], "]"}], ";"}]}], 
+      "\[IndentingNewLine]", "\t\t", "]"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "\t", 
+     RowBox[{"(*", 
+      RowBox[{"Print", " ", "Field"}], "*)"}], "\[IndentingNewLine]", "\t", 
+     RowBox[{"Column", "[", 
+      RowBox[{"{", "\n", "\t\t", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<Phase Potrait\>\"", ",", "18", ",", "Bold"}], "]"}], 
+        ",", "\[IndentingNewLine]", "\t", 
+        RowBox[{"StreamPlot", "[", 
+         RowBox[{
+          RowBox[{"F", "[", 
+           RowBox[{"x", ",", "y"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", 
+            RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"y", ",", 
+            RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
+          RowBox[{"StreamColorFunction", "->", "\"\<Rainbow\>\""}], ",", 
+          RowBox[{"Axes", " ", "->", " ", "True"}], ",", 
+          RowBox[{"Frame", "->", "False"}], ",", " ", 
+          RowBox[{"StreamPoints", "->", "Fine"}], ",", " ", 
+          RowBox[{"ImageSize", " ", "->", " ", 
+           RowBox[{"72", " ", "5"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+        "\t\t", 
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<System\>\"", ",", "18", ",", "Bold"}], "]"}], ",", "\n",
+         "\t\t", 
+        RowBox[{"\"\<The Entered System:\>\"", " ", 
+         RowBox[{"MatrixForm", "[", 
+          RowBox[{"F", "[", 
+           RowBox[{"x", ",", "y"}], "]"}], "]"}]}], ",", "\n", "\t\t", 
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<Jacobian\>\"", ",", "18", ",", "Bold"}], "]"}], ",", 
+        "\[IndentingNewLine]", "\t\t", 
+        RowBox[{"\"\<The Jacobian of the system: \>\"", 
+         RowBox[{"MatrixForm", "[", 
+          RowBox[{"J", "[", 
+           RowBox[{"x", ",", "y"}], "]"}], "]"}]}], ",", 
+        "\[IndentingNewLine]", "\t\t", 
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<Fixed Points\>\"", ",", "18", ",", "Bold"}], "]"}], ",",
+         "\n", "\t\t", "\"\<Fixed Points: \>\"", ",", "\[IndentingNewLine]", 
+        "        ", "fpList", ",", "\[IndentingNewLine]", "        ", 
+        "\"\<Systems: \>\"", ",", "\[IndentingNewLine]", "\t\t", "systems"}], 
+       "\[IndentingNewLine]", "\t\t  ", "}"}], "]"}]}], "\[IndentingNewLine]",
+     "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", 
+    RowBox[{"(*", 
+     RowBox[{"Input", " ", "Fields"}], "*)"}], ",", " ", "\n", "\t", 
+    RowBox[{"Style", "[", 
+     RowBox[{"\"\<Dynamical System\>\"", ",", "Large", ",", "Bold"}], "]"}], 
+    ",", "\n", "\t", 
+    RowBox[{"Style", "[", 
+     RowBox[{
+     "\"\<Enter a system of differential equations of the form \
+\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+RowBox[{
+FractionBox[
+RowBox[{
+StyleBox[\"d\", \"TI\"], 
+StyleBox[\"x\", \"TI\"]}], 
+RowBox[{
+StyleBox[\"d\", \"TI\"], 
+StyleBox[\"t\", \"TI\"]}]], \"\[LongEqual]\", 
+StyleBox[\"f\", \"TI\"], 
+RowBox[{\"(\", 
+RowBox[{
+StyleBox[\"x\", \"TI\"], \",\", 
+StyleBox[\"y\", \"TI\"]}], \")\"}]}], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"\\\\frac{dx}{dt} = f(x,y)\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\) and \!\(\*TemplateBox[<|\"boxes\" -> \
+FormBox[
+RowBox[{
+FractionBox[
+RowBox[{
+StyleBox[\"d\", \"TI\"], 
+StyleBox[\"y\", \"TI\"]}], 
+RowBox[{
+StyleBox[\"d\", \"TI\"], 
+StyleBox[\"t\", \"TI\"]}]], \"\[LongEqual]\", 
+StyleBox[\"g\", \"TI\"], 
+RowBox[{\"(\", 
+RowBox[{
+StyleBox[\"x\", \"TI\"], \",\", 
+StyleBox[\"y\", \"TI\"]}], \")\"}]}], TraditionalForm], \"errors\" -> {}, \
+\"input\" -> \"\\\\frac{dy}{dt} = g(x,y)\", \"state\" -> \
+\"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", " ", ",", "12"}], "]"}], ",", 
+    "\n", "\t", 
+    RowBox[{"Grid", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Control", "@", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"f", ",", 
+             RowBox[{
+              RowBox[{"\[Minus]", 
                RowBox[{"(", 
-                RowBox[{"2", "+", "y"}], ")"}]}]}], "}"}], ",", "InputField", 
-            ",", 
-            RowBox[{"ImageSize", "->", "Small"}]}], "}"}]}], "}"}]}], "}"}], 
-      "]"}]}], "]"}]}], ";"}]], "Code",
+                RowBox[{"x", "\[Minus]", "y"}], ")"}]}], 
+              RowBox[{"(", 
+               RowBox[{"1", "\[Minus]", "x", "\[Minus]", "y"}], ")"}]}]}], 
+            "}"}], ",", "InputField", ",", 
+           RowBox[{"ImageSize", "->", "Small"}]}], "}"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Control", "@", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"g", ",", 
+             RowBox[{"x", 
+              RowBox[{"(", 
+               RowBox[{"2", "+", "y"}], ")"}]}]}], "}"}], ",", "InputField", 
+           ",", 
+           RowBox[{"ImageSize", "->", "Small"}]}], "}"}]}], "}"}]}], "}"}], 
+     "]"}]}], "]"}]}]], "Code",
  CellChangeTimes->{{3.882066469923746*^9, 3.882066515781991*^9}, {
    3.8820666567961607`*^9, 3.8820666785655866`*^9}, {3.8820667389600506`*^9, 
    3.882067015694331*^9}, {3.8820670497972765`*^9, 3.882067117292035*^9}, {
@@ -509,8 +555,185 @@ Cell[BoxData[
    3.8820678574485226`*^9, 3.8820678804864902`*^9}, {3.8820679166397614`*^9, 
    3.8820679292456226`*^9}, {3.882068186978013*^9, 3.8820681988275704`*^9}, {
    3.882143766941361*^9, 3.88214396373497*^9}, {3.882144015287819*^9, 
-   3.88214401654539*^9}},
- CellLabel->"In[6]:=",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"]
+   3.88214401654539*^9}, {3.882202805567084*^9, 3.882202833241722*^9}, {
+   3.882202872815445*^9, 3.882202940903883*^9}, {3.882203031115447*^9, 
+   3.8822030513041906`*^9}, {3.882203084060695*^9, 3.8822030861075745`*^9}, {
+   3.882203158016682*^9, 3.882203159748685*^9}, {3.8822032237740755`*^9, 
+   3.8822032580242662`*^9}, {3.8822034393082733`*^9, 3.882203454454094*^9}, {
+   3.882203485209247*^9, 3.8822035736870933`*^9}, {3.8822036306917076`*^9, 
+   3.882203674943802*^9}, {3.8822037343718114`*^9, 3.882203767295263*^9}, {
+   3.8822038591002197`*^9, 3.8822039478461256`*^9}, {3.882204007620284*^9, 
+   3.882204107169089*^9}, {3.8822041725338383`*^9, 3.8822041767699203`*^9}, {
+   3.882204390076017*^9, 3.882204523978381*^9}, {3.8822045600289373`*^9, 
+   3.882204581308321*^9}, {3.8822046113427505`*^9, 3.882204614567154*^9}, 
+   3.882204676323223*^9, {3.88220472041401*^9, 3.882204727062793*^9}, {
+   3.882204782861046*^9, 3.882204828520796*^9}, {3.8822048813752985`*^9, 
+   3.882204886937792*^9}},
+ CellLabel->"In[47]:=",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`f$$ = (
+     1 - $CellContext`x - $CellContext`y) (-$CellContext`x + $CellContext`y), \
+$CellContext`g$$ = $CellContext`x (2 + $CellContext`y), Typeset`show$$ = True,
+     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[
+       Style["Dynamical System", Large, Bold]], 
+      Manipulate`Dump`ThisIsNotAControl}, {
+      Hold[
+       Style[
+       "Enter a system of differential equations of the form \
+\!\(\*TemplateBox[<|\"boxes\" -> \
+FormBox[RowBox[{FractionBox[RowBox[{StyleBox[\"d\", \"TI\"], StyleBox[\"x\", \
+\"TI\"]}], RowBox[{StyleBox[\"d\", \"TI\"], StyleBox[\"t\", \"TI\"]}]], \"\
+\[LongEqual]\", StyleBox[\"f\", \"TI\"], RowBox[{\"(\", \
+RowBox[{StyleBox[\"x\", \"TI\"], \",\", StyleBox[\"y\", \"TI\"]}], \")\"}]}], \
+TraditionalForm], \"errors\" -> {}, \"input\" -> \"\\\\frac{dx}{dt} = \
+f(x,y)\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\) and \
+\!\(\*TemplateBox[<|\"boxes\" -> \
+FormBox[RowBox[{FractionBox[RowBox[{StyleBox[\"d\", \"TI\"], StyleBox[\"y\", \
+\"TI\"]}], RowBox[{StyleBox[\"d\", \"TI\"], StyleBox[\"t\", \"TI\"]}]], \"\
+\[LongEqual]\", StyleBox[\"g\", \"TI\"], RowBox[{\"(\", \
+RowBox[{StyleBox[\"x\", \"TI\"], \",\", StyleBox[\"y\", \"TI\"]}], \")\"}]}], \
+TraditionalForm], \"errors\" -> {}, \"input\" -> \"\\\\frac{dy}{dt} = \
+g(x,y)\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 12]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`f$$], (
+        1 - $CellContext`x - $CellContext`y) (-$CellContext`x + \
+$CellContext`y)}}, {{
+       Hold[$CellContext`g$$], $CellContext`x (2 + $CellContext`y)}}, {
+      Hold[
+       Grid[{{
+          Manipulate`Place[1]}, {
+          Manipulate`Place[2]}}]], Manipulate`Dump`ThisIsNotAControl}}, 
+    Typeset`size$$ = {708., {334.63403320312506`, 340.36596679687506`}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     2, StandardForm, 
+      "Variables" :> {$CellContext`f$$ = (
+          1 - $CellContext`x - $CellContext`y) (-$CellContext`x + \
+$CellContext`y), $CellContext`g$$ = $CellContext`x (2 + $CellContext`y)}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ($CellContext`f1[
+          Pattern[$CellContext`x$, 
+           Blank[]], 
+          Pattern[$CellContext`y$, 
+           Blank[]]] = $CellContext`f$$; $CellContext`f2[
+          Pattern[$CellContext`x$, 
+           Blank[]], 
+          Pattern[$CellContext`y$, 
+           Blank[]]] = $CellContext`g$$; $CellContext`F[
+          Pattern[$CellContext`x, 
+           Blank[]], 
+          Pattern[$CellContext`y, 
+           Blank[]]] = {
+          $CellContext`f1[$CellContext`x, $CellContext`y], 
+          $CellContext`f2[$CellContext`x, $CellContext`y]}; $CellContext`J[
+          Pattern[$CellContext`x, 
+           Blank[]], 
+          Pattern[$CellContext`y, 
+           Blank[]]] = {{
+           D[
+            $CellContext`f1[$CellContext`x, $CellContext`y], $CellContext`x], 
+           D[
+            $CellContext`f1[$CellContext`x, $CellContext`y], \
+$CellContext`y]}, {
+           D[
+            $CellContext`f2[$CellContext`x, $CellContext`y], $CellContext`x], 
+           D[
+            $CellContext`f2[$CellContext`x, $CellContext`y], \
+$CellContext`y]}}; $CellContext`fpList = Solve[{Part[
+             $CellContext`F[$CellContext`x, $CellContext`y], 1] == 0, Part[
+             $CellContext`F[$CellContext`x, $CellContext`y], 2] == 
+           0}, {$CellContext`x, $CellContext`y}]; $CellContext`systems = {}; 
+       For[$CellContext`i = 1, $CellContext`i <= Length[$CellContext`fpList], 
+         Increment[$CellContext`i], $CellContext`fp = {
+            Part[
+             Part[
+              Part[$CellContext`fpList, $CellContext`i], 1], 2], 
+            Part[
+             Part[
+              Part[$CellContext`fpList, $CellContext`i], 2], 
+             2]}; $CellContext`j = MatrixForm[
+            $CellContext`J[
+             Part[$CellContext`fp, 1], 
+             Part[$CellContext`fp, 2]]]; $CellContext`es = Eigensystem[
+            $CellContext`J[
+             Part[$CellContext`fp, 1], 
+             Part[$CellContext`fp, 2]]]; 
+         AppendTo[$CellContext`systems, {$CellContext`fp, $CellContext`j, \
+$CellContext`es}]; Null]; Column[{
+          Style["Phase Potrait", 18, Bold], 
+          StreamPlot[
+           $CellContext`F[$CellContext`x, $CellContext`y], {$CellContext`x, \
+-10, 10}, {$CellContext`y, -10, 10}, StreamColorFunction -> "Rainbow", Axes -> 
+           True, Frame -> False, StreamPoints -> Fine, ImageSize -> 72 5], 
+          Style["System", 18, Bold], "The Entered System:" MatrixForm[
+            $CellContext`F[$CellContext`x, $CellContext`y]], 
+          Style["Jacobian", 18, Bold], "The Jacobian of the system: " 
+          MatrixForm[
+            $CellContext`J[$CellContext`x, $CellContext`y]], 
+          Style["Fixed Points", 18, Bold], 
+          "Fixed Points: ", $CellContext`fpList, 
+          "Systems: ", $CellContext`systems}]), "Specifications" :> {
+        Style["Dynamical System", Large, Bold], 
+        Style[
+        "Enter a system of differential equations of the form \
+\!\(\*TemplateBox[<|\"boxes\" -> \
+FormBox[RowBox[{FractionBox[RowBox[{StyleBox[\"d\", \"TI\"], StyleBox[\"x\", \
+\"TI\"]}], RowBox[{StyleBox[\"d\", \"TI\"], StyleBox[\"t\", \"TI\"]}]], \"\
+\[LongEqual]\", StyleBox[\"f\", \"TI\"], RowBox[{\"(\", \
+RowBox[{StyleBox[\"x\", \"TI\"], \",\", StyleBox[\"y\", \"TI\"]}], \")\"}]}], \
+TraditionalForm], \"errors\" -> {}, \"input\" -> \"\\\\frac{dx}{dt} = \
+f(x,y)\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\) and \
+\!\(\*TemplateBox[<|\"boxes\" -> \
+FormBox[RowBox[{FractionBox[RowBox[{StyleBox[\"d\", \"TI\"], StyleBox[\"y\", \
+\"TI\"]}], RowBox[{StyleBox[\"d\", \"TI\"], StyleBox[\"t\", \"TI\"]}]], \"\
+\[LongEqual]\", StyleBox[\"g\", \"TI\"], RowBox[{\"(\", \
+RowBox[{StyleBox[\"x\", \"TI\"], \",\", StyleBox[\"y\", \"TI\"]}], \")\"}]}], \
+TraditionalForm], \"errors\" -> {}, \"input\" -> \"\\\\frac{dy}{dt} = \
+g(x,y)\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 
+         12], {{$CellContext`f$$, (
+           1 - $CellContext`x - $CellContext`y) (-$CellContext`x + \
+$CellContext`y)}, ControlType -> InputField, ImageSize -> Small, 
+         ControlPlacement -> 
+         1}, {{$CellContext`g$$, $CellContext`x (2 + $CellContext`y)}, 
+         ControlType -> InputField, ImageSize -> Small, ControlPlacement -> 
+         2}, 
+        Grid[{{
+           Manipulate`Place[1]}, {
+           Manipulate`Place[2]}}]}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{756., {419.134033203125, 424.865966796875}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.88220288812418*^9, 3.8822029182036457`*^9}, 
+   3.882203089050043*^9, 3.88220316136878*^9, {3.882203226008458*^9, 
+   3.8822032591336164`*^9}, 3.8822034563566356`*^9, {3.8822034872861195`*^9, 
+   3.8822035439441977`*^9}, 3.882203577700679*^9, {3.882203645675226*^9, 
+   3.8822036622979136`*^9}, {3.8822037421667914`*^9, 3.8822037571744285`*^9}, 
+   3.882203861443954*^9, {3.882203891765614*^9, 3.8822039492495995`*^9}, 
+   3.8822040129501247`*^9, 3.882204064154068*^9, 3.8822041483004436`*^9, 
+   3.882204178519944*^9, {3.88220439826812*^9, 3.882204405372372*^9}, {
+   3.882204465941512*^9, 3.8822044836498966`*^9}, {3.8822046427136126`*^9, 
+   3.882204689208839*^9}, {3.882204722937495*^9, 3.8822047281565437`*^9}, {
+   3.8822047883204184`*^9, 3.882204829395735*^9}, 3.882204891695283*^9},
+ CellLabel->"Out[47]=",ExpressionUUID->"f6e529cc-6f56-4ab3-b0b0-499b45c1a57c"]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -552,8 +775,8 @@ WindowSize->{Full, Full},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 SpellingDictionaries->{"CorrectWords"->{
  "Representer\[CloseCurlyQuote]s", "Representer", "Osorio", "pportrait"}},
-Magnification:>2. Inherited,
-FrontEndVersion->"13.0 for Mac OS X ARM (64-bit) (December 2, 2021)",
+Magnification:>1. Inherited,
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (August 22, 2022)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"4156979c-3c12-4b8b-bbcb-178a1b77cd10"
 ]
@@ -569,35 +792,38 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 156, 3, 194, "Title",ExpressionUUID->"331ec153-d022-49ec-8232-a307003b2b8b"],
-Cell[739, 27, 289, 7, 158, "Subtitle",ExpressionUUID->"6bfeb5f5-1c54-4901-87ea-59d29ed5cee1"],
+Cell[580, 22, 156, 3, 98, "Title",ExpressionUUID->"331ec153-d022-49ec-8232-a307003b2b8b"],
+Cell[739, 27, 339, 7, 79, "Subtitle",ExpressionUUID->"6bfeb5f5-1c54-4901-87ea-59d29ed5cee1"],
 Cell[CellGroupData[{
-Cell[1053, 38, 158, 3, 134, "Section",ExpressionUUID->"b02d3d9c-3e8e-4b6d-b5d5-57c9d32886ef"],
-Cell[1214, 43, 599, 12, 294, "Text",ExpressionUUID->"578e83f7-6a79-4a89-a23f-5ef478ba7f5a"]
+Cell[1103, 38, 158, 3, 67, "Section",ExpressionUUID->"b02d3d9c-3e8e-4b6d-b5d5-57c9d32886ef"],
+Cell[1264, 43, 647, 12, 150, "Text",ExpressionUUID->"578e83f7-6a79-4a89-a23f-5ef478ba7f5a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1850, 60, 243, 4, 134, "Section",ExpressionUUID->"17083cd6-2c29-4d78-8ddf-cc99f496c74a"],
-Cell[2096, 66, 467, 11, 159, "Text",ExpressionUUID->"aa937040-2283-4bf3-9f03-2b06bf4939ef"],
+Cell[1948, 60, 243, 4, 67, "Section",ExpressionUUID->"17083cd6-2c29-4d78-8ddf-cc99f496c74a"],
+Cell[2194, 66, 467, 11, 58, "Text",ExpressionUUID->"aa937040-2283-4bf3-9f03-2b06bf4939ef"],
 Cell[CellGroupData[{
-Cell[2588, 81, 1009, 27, 164, "Code",ExpressionUUID->"6f679c88-b364-4dd9-b5c5-392c5a5ace69"],
-Cell[3600, 110, 1783, 37, 714, "Output",ExpressionUUID->"a1469b18-5780-4307-9b45-c9e157245f48"]
+Cell[2686, 81, 1009, 27, 68, "Code",ExpressionUUID->"6f679c88-b364-4dd9-b5c5-392c5a5ace69"],
+Cell[3698, 110, 1822, 37, 295, "Output",ExpressionUUID->"a1469b18-5780-4307-9b45-c9e157245f48"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5420, 152, 489, 11, 164, "Code",ExpressionUUID->"5d322978-a108-42fd-b067-ce6ecb6d251b"],
-Cell[5912, 165, 4527, 114, 417, "Output",ExpressionUUID->"09cba5f5-3d56-4da4-837f-7113b900a490"]
+Cell[5557, 152, 489, 11, 68, "Code",ExpressionUUID->"5d322978-a108-42fd-b067-ce6ecb6d251b"],
+Cell[6049, 165, 4527, 114, 191, "Output",ExpressionUUID->"09cba5f5-3d56-4da4-837f-7113b900a490"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10488, 285, 153, 3, 134, "Section",ExpressionUUID->"9efded44-15c8-43d3-a7a5-40280e1f15ed"],
+Cell[10625, 285, 153, 3, 67, "Section",ExpressionUUID->"9efded44-15c8-43d3-a7a5-40280e1f15ed"],
 Cell[CellGroupData[{
-Cell[10666, 292, 177, 3, 107, "Subsection",ExpressionUUID->"4cd0ee05-51a4-4652-896f-1cbf8a108cf7"],
-Cell[10846, 297, 8698, 215, 1266, "Code",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"]
+Cell[10803, 292, 177, 3, 54, "Subsection",ExpressionUUID->"4cd0ee05-51a4-4652-896f-1cbf8a108cf7"],
+Cell[CellGroupData[{
+Cell[11005, 299, 11094, 272, 700, "Code",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
+Cell[22102, 573, 8371, 161, 863, "Output",ExpressionUUID->"f6e529cc-6f56-4ab3-b0b0-499b45c1a57c"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[19581, 517, 163, 3, 107, "Subsection",ExpressionUUID->"8db4dca2-4fee-42ba-880a-212cf85fa7df"],
+Cell[30522, 740, 163, 3, 54, "Subsection",ExpressionUUID->"8db4dca2-4fee-42ba-880a-212cf85fa7df"],
 Cell[CellGroupData[{
-Cell[19769, 524, 337, 6, 125, "Code",ExpressionUUID->"f31a03e1-f17a-47fe-a50f-518c2e78329c"],
-Cell[20109, 532, 568, 12, 139, "Output",ExpressionUUID->"eb6400a1-f789-4800-ac63-4e7572643632"]
+Cell[30710, 747, 337, 6, 50, "Code",ExpressionUUID->"f31a03e1-f17a-47fe-a50f-518c2e78329c"],
+Cell[31050, 755, 568, 12, 35, "Output",ExpressionUUID->"eb6400a1-f789-4800-ac63-4e7572643632"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
