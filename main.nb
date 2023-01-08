@@ -10,30 +10,308 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10879,        276]
-NotebookOptionsPosition[     10369,        258]
-NotebookOutlinePosition[     10796,        275]
-CellTagsIndexPosition[     10753,        272]
+NotebookDataLength[     22958,        600]
+NotebookOptionsPosition[     20729,        550]
+NotebookOutlinePosition[     21270,        569]
+CellTagsIndexPosition[     21227,        566]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
+Cell["pportrait", "Title",
+ CellChangeTimes->{{3.8821424336574306`*^9, 
+  3.8821424380583143`*^9}},ExpressionUUID->"331ec153-d022-49ec-8232-\
+a307003b2b8b"],
+
+Cell[TextData[{
+ "By Marvin & Juan \n",
+ StyleBox["Department of Applied Mathematics, UW", "Author"]
+}], "Subtitle",
+ CellChangeTimes->{{3.8821424419179*^9, 3.882142454282632*^9}, {
+  3.882143098860895*^9, 
+  3.882143115891355*^9}},ExpressionUUID->"6bfeb5f5-1c54-4901-87ea-\
+59d29ed5cee1"],
+
+Cell[CellGroupData[{
+
+Cell["Description", "Section",
+ CellChangeTimes->{{3.882142478506878*^9, 
+  3.8821424807189627`*^9}},ExpressionUUID->"b02d3d9c-3e8e-4b6d-b5d5-\
+57c9d32886ef"],
+
+Cell[TextData[{
+ "This project will create a Mathematica interactive application called \
+\[OpenCurlyDoubleQuote]",
+ StyleBox["pportrait", "Code"],
+ "\[CloseCurlyDoubleQuote] in order to study 2D dynamical systems. \
+Specifically, the application will output information about\n- Equilibrium \
+points of the system and their classifications.\n- Phase portrait.\n\nThe \
+application is embedded in a HTML website. "
+}], "Text",
+ CellChangeTimes->{{3.882142484506658*^9, 3.88214267589585*^9}, {
+  3.88214271896544*^9, 
+  3.882142921365891*^9}},ExpressionUUID->"578e83f7-6a79-4a89-a23f-\
+5ef478ba7f5a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["How to embed an interactive plot in your website ?", "Section",
+ CellChangeTimes->{{3.882142834770176*^9, 3.882142840885264*^9}, {
+  3.88214292529284*^9, 
+  3.882142948245767*^9}},ExpressionUUID->"17083cd6-2c29-4d78-8ddf-\
+cc99f496c74a"],
+
+Cell[TextData[{
+ "This simple example illustrates the approach to be used later in which we \
+simply create an interactive application using ",
+ StyleBox["Manipulate", "Code"],
+ " and then we simply use ",
+ StyleBox["CloudDeploy", "Code"],
+ " + ",
+ StyleBox["EmbedCode", "Code"],
+ " to get the code to be embedded in the html file. "
+}], "Text",
+ CellChangeTimes->{{3.882142952624527*^9, 
+  3.8821430442611*^9}},ExpressionUUID->"aa937040-2283-4bf3-9f03-2b06bf4939ef"],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
- RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+ StyleBox[
   RowBox[{
-   RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    StyleBox[
+     RowBox[{"(", "*"}]], 
+    RowBox[{"Create", " ", "interactive", " ", "application", " ", "simple"}], 
+    StyleBox[
+     RowBox[{"*", ")"}]]}], "\n", 
+   RowBox[{"simple", " ", "=", " ", 
+    RowBox[{"Manipulate", "[", 
+     RowBox[{
+      RowBox[{"Plot", "[", 
+       RowBox[{
+        RowBox[{"Sin", "[", 
+         RowBox[{
+          RowBox[{"a", " ", "x"}], "+", "b"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "0", ",", "6"}], "}"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"a", ",", "1", ",", "4"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"b", ",", "0", ",", "10"}], "}"}]}], "]"}]}]}], 
+  "Code"]], "Code",
+ CellChangeTimes->{{3.8820573533113155`*^9, 3.8820574056726694`*^9}, {
+  3.882057638979954*^9, 3.8820576417335043`*^9}, {3.88214315818808*^9, 
+  3.88214319891121*^9}, {3.88214323633924*^9, 3.882143254017858*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"6f679c88-b364-4dd9-b5c5-392c5a5ace69"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 1, $CellContext`b$$ = 0, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`a$$], 1, 4}, {
+      Hold[$CellContext`b$$], 0, 10}}, Typeset`size$$ = {720., {208., 218.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 1, $CellContext`b$$ = 0}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[
+        Sin[$CellContext`a$$ $CellContext`x + $CellContext`b$$], \
+{$CellContext`x, 0, 6}], 
+      "Specifications" :> {{$CellContext`a$$, 1, 4}, {$CellContext`b$$, 0, 
+         10}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{804., {322., 334.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.882057405956488*^9, 3.882057643157379*^9, 
+  3.882143259380711*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"a1469b18-5780-4307-9b45-c9e157245f48"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Get", " ", "the", " ", "HTML", " ", "code"}], "*)"}], "\n", 
+  RowBox[{"EmbedCode", "[", 
+   RowBox[{"CloudDeploy", "[", 
+    RowBox[{"simple", ",", " ", 
+     RowBox[{"Permissions", "->", "\"\<Public\>\""}]}], "]"}], 
+   "]"}]}]], "Code",
+ CellChangeTimes->{{3.882143208738559*^9, 3.882143231114134*^9}, {
+  3.8821432637593107`*^9, 3.8821432639995737`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"5d322978-a108-42fd-b067-ce6ecb6d251b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  FrameBox[
+   PanelBox[
+    TagBox[GridBox[{
+       {
+        StyleBox["\<\"Embeddable Code\"\>", "ControlStyle",
+         StripOnInput->False,
+         FontSize->Larger,
+         FontWeight->Bold,
+         FontColor->GrayLevel[0.3]]},
+       {
+        StyleBox["\<\"Use the code below to call the Wolfram Cloud function \
+from HTML:\"\>",
+         StripOnInput->False,
+         FontColor->RGBColor[0.23, 0.23, 0.23]]},
+       {
+        FrameBox[
+         TagBox[GridBox[{
+            {
+             TagBox[GridBox[{
+                {
+                 TagBox[GridBox[{
+                    {
+                    StyleBox["\<\"Code\"\>", "ControlStyle",
+                    StripOnInput->False,
+                    FontWeight->Bold,
+                    FontColor->RGBColor[0.33, 0.33, 0.33]]},
+                    {
+                    StyleBox["\<\"\"\>",
+                    StripOnInput->False,
+                    FontColor->RGBColor[0.33, 0.33, 0.33]]}
+                   },
+                   DefaultBaseStyle->"Column",
+                   GridBoxAlignment->{"Columns" -> {{Left}}},
+                   
+                   GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                  "Column"], 
+                 ItemBox[
+                  ButtonBox["\<\"Copy to Clipboard\"\>",
+                   
+                   Appearance:>FEPrivate`FrontEndResource[
+                    "FEExpressions", "GrayButtonNinePatchAppearance"],
+                   BaseStyle->"DialogStyle",
+                   
+                   ButtonFunction:>CopyToClipboard[
+                    "<iframe \
+src=\"https://www.wolframcloud.com/obj/08f6468d-9d83-417c-ab9c-482e7de9fb4a?_\
+embed=iframe\" width=\"600\" height=\"800\"></iframe>"],
+                   Evaluator->Automatic,
+                   FrameMargins->{{10, 10}, {0, 0}},
+                   ImageSize->Automatic,
+                   Method->"Queued"],
+                  Alignment->Right,
+                  StripOnInput->False]}
+               },
+               AutoDelete->False,
+               GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Top}}},
+               GridBoxItemSize->{"Columns" -> {{Fit}}, "Rows" -> {{Fit}}}],
+              "Grid"]},
+            {
+             FrameBox[
+              PaneBox[Cell["\<\
+<iframe src=\"https://www.wolframcloud.com/obj/08f6468d-9d83-417c-ab9c-\
+482e7de9fb4a?_embed=iframe\" width=\"600\" height=\"800\"></iframe>\
+\>",
+                Editable->False,
+                Deployed->False,ExpressionUUID->
+                "1f82c9f4-56fc-4e47-94c4-8b122983e17b"],
+               AppearanceElements->{},
+               ImageSize->{
+                 Scaled[1], 60},
+               Scrollbars->Automatic],
+              Background->GrayLevel[1],
+              BaseStyle->"StandardForm",
+              FrameStyle->RGBColor[0.69, 0.69, 0.69],
+              StripOnInput->False]}
+           },
+           DefaultBaseStyle->"Column",
+           GridBoxAlignment->{"Columns" -> {{Left}}},
+           GridBoxItemSize->{"Columns" -> {{Fit}}, "Rows" -> {{Fit}}},
+           GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {0.2, {0.5}}}],
+          "Column"],
+         Background->RGBColor[0.96, 0.96, 0.96],
+         FrameMargins->{{14, 14}, {14, 10}},
+         FrameStyle->RGBColor[0.69, 0.69, 0.69],
+         StripOnInput->False]}
+      },
+      DefaultBaseStyle->"Column",
+      GridBoxAlignment->{"Columns" -> {{Left}}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {0.3, 0.4, 0.8, 1.5}}],
+     "Column"],
+    Background->RGBColor[0.87, 0.87, 0.87],
+    BaseStyle->{"Deploy"},
+    ImageSize->630],
+   Background->RGBColor[0.87, 0.87, 0.87],
+   FrameMargins->{{2, 2}, {1, 1}},
+   FrameStyle->RGBColor[0.76, 0.76, 0.76],
+   RoundingRadius->6,
+   StripOnInput->False],
+  EmbeddingObject[<|
+   "EnvironmentName" -> "HTML", 
+    "CodeSection" -> <|
+     "Content" -> 
+      "<iframe src=\"https://www.wolframcloud.com/obj/08f6468d-9d83-417c-ab9c-\
+482e7de9fb4a?_embed=iframe\" width=\"600\" height=\"800\"></iframe>", "Title" -> 
+      Automatic, "Filename" -> "cloudembed.html"|>, "CloudObject" -> 
+    CloudObject[
+     "https://www.wolframcloud.com/obj/08f6468d-9d83-417c-ab9c-482e7de9fb4a"]|>\
+]]], "Output",
+ CellChangeTimes->{3.882057405956488*^9, 3.8820576453320756`*^9, 
+  3.882143272956588*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"09cba5f5-3d56-4da4-837f-7113b900a490"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["pportrait", "Section",
+ CellChangeTimes->{{3.88214365543757*^9, 
+  3.882143661541552*^9}},ExpressionUUID->"9efded44-15c8-43d3-a7a5-\
+40280e1f15ed"],
+
+Cell[CellGroupData[{
+
+Cell["Create interactive application", "Subsection",
+ CellChangeTimes->{{3.88214366830667*^9, 
+  3.882143690376828*^9}},ExpressionUUID->"4cd0ee05-51a4-4652-896f-\
+1cbf8a108cf7"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pportrait", " ", "=", " ", 
+   RowBox[{"Manipulate", "[", "\n", "\t", 
+    RowBox[{"(*", 
+     RowBox[{"Functionalities", " ", "and", " ", "calculations"}], "*)"}], 
+    "\[IndentingNewLine]", "\t", 
     RowBox[{
      RowBox[{
       RowBox[{
        RowBox[{"f1", "[", 
         RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", "f"}], ";", 
-      "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", "\t", 
       RowBox[{
        RowBox[{"f2", "[", 
         RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", "g"}], ";", 
-      "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", "\t", 
       RowBox[{
        RowBox[{"F", "[", 
         RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", 
@@ -43,7 +321,7 @@ Cell[BoxData[
           RowBox[{"x", ",", "y"}], "]"}], ",", 
          RowBox[{"f2", "[", 
           RowBox[{"x", ",", "y"}], "]"}]}], "}"}]}], ";", 
-      "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", "\t", 
       RowBox[{
        RowBox[{"J", "[", 
         RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", 
@@ -69,7 +347,7 @@ Cell[BoxData[
             RowBox[{
              RowBox[{"f2", "[", 
               RowBox[{"x", ",", "y"}], "]"}], ",", "y"}], "]"}]}], "}"}]}], 
-        "}"}]}], ";", "\[IndentingNewLine]", 
+        "}"}]}], ";", "\[IndentingNewLine]", "\t", 
       RowBox[{"fpList", " ", "=", " ", 
        RowBox[{"Solve", "[", 
         RowBox[{
@@ -80,6 +358,7 @@ Cell[BoxData[
              RowBox[{"F", "[", 
               RowBox[{"x", ",", "y"}], "]"}], "[", 
              RowBox[{"[", "1", "]"}], "]"}], " ", "==", " ", "0"}], ",", " ", 
+           
            RowBox[{
             RowBox[{
              RowBox[{"F", "[", 
@@ -88,9 +367,9 @@ Cell[BoxData[
          ",", 
          RowBox[{"{", 
           RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";", 
-      "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", "\t", 
       RowBox[{"systems", "=", 
-       RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", "\t", 
       RowBox[{"For", "[", 
        RowBox[{
         RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
@@ -142,19 +421,17 @@ Cell[BoxData[
               RowBox[{"[", "1", "]"}], "]"}], ",", 
              RowBox[{"fp", "[", 
               RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "]"}]}], ";", 
-         "\[IndentingNewLine]", "\t", 
+         "\[IndentingNewLine]", "\t\t", 
          RowBox[{"AppendTo", "[", 
           RowBox[{"systems", " ", ",", 
            RowBox[{"{", 
             RowBox[{"fp", ",", "j", ",", "es"}], "}"}]}], "]"}], ";"}]}], 
-       "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-      "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", "\t\t", "]"}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", "\t", 
       RowBox[{"(*", 
-       RowBox[{"Print", " ", "Field"}], "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"Print", " ", "Field"}], "*)"}], "\[IndentingNewLine]", "\t", 
       RowBox[{"Column", "[", 
-       RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{"{", "\[IndentingNewLine]", "\t", 
         RowBox[{
          RowBox[{"StreamPlot", "[", 
           RowBox[{
@@ -172,26 +449,27 @@ Cell[BoxData[
            RowBox[{"StreamPoints", "->", "Fine"}], ",", " ", 
            RowBox[{"ImageSize", " ", "->", " ", 
             RowBox[{"72", " ", "5"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+         "\t\t", 
          RowBox[{"\"\<System: \>\"", 
           RowBox[{"MatrixForm", "[", 
            RowBox[{"F", "[", 
             RowBox[{"x", ",", "y"}], "]"}], "]"}]}], ",", 
-         "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "\t\t", 
          RowBox[{"\"\<Jacobian: \>\"", 
           RowBox[{"MatrixForm", "[", 
            RowBox[{"J", "[", 
             RowBox[{"x", ",", "y"}], "]"}], "]"}]}], ",", 
-         "\[IndentingNewLine]", "\"\<Fixed Points: \>\"", ",", 
-         "\[IndentingNewLine]", " ", "fpList", ",", "\[IndentingNewLine]", 
-         "\"\<Systems: \>\"", ",", "\[IndentingNewLine]", "systems"}], 
-        "\[IndentingNewLine]", "}"}], "]"}]}], "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "\t\t", "\"\<Fixed Points: \>\"", ",", 
+         "\[IndentingNewLine]", "        ", "fpList", ",", 
+         "\[IndentingNewLine]", "        ", "\"\<Systems: \>\"", ",", 
+         "\[IndentingNewLine]", "\t\t", "systems"}], "\[IndentingNewLine]", 
+        "\t\t  ", "}"}], "]"}]}], "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", 
      RowBox[{"(*", 
-      RowBox[{"Input", " ", "Fields"}], "*)"}], ",", " ", 
+      RowBox[{"Input", " ", "Fields"}], "*)"}], ",", " ", "\n", "\t", 
      RowBox[{"Style", "[", 
       RowBox[{"\"\<Dynamical System\>\"", ",", "12", ",", "Bold"}], "]"}], 
-     ",", 
+     ",", "\n", "\t", 
      RowBox[{"Grid", "[", 
       RowBox[{"{", 
        RowBox[{
@@ -220,8 +498,7 @@ Cell[BoxData[
                 RowBox[{"2", "+", "y"}], ")"}]}]}], "}"}], ",", "InputField", 
             ",", 
             RowBox[{"ImageSize", "->", "Small"}]}], "}"}]}], "}"}]}], "}"}], 
-      "]"}]}], "]"}], ",", 
-   RowBox[{"Permissions", "->", "\"\<Public\>\""}]}], "]"}]], "Input",
+      "]"}]}], "]"}]}], ";"}]], "Code",
  CellChangeTimes->{{3.882066469923746*^9, 3.882066515781991*^9}, {
    3.8820666567961607`*^9, 3.8820666785655866`*^9}, {3.8820667389600506`*^9, 
    3.882067015694331*^9}, {3.8820670497972765`*^9, 3.882067117292035*^9}, {
@@ -230,36 +507,53 @@ Cell[BoxData[
    3.88206761285369*^9}, {3.8820676494749594`*^9, 3.8820676520920677`*^9}, {
    3.8820677455506783`*^9, 3.882067767332395*^9}, 3.8820678254060397`*^9, {
    3.8820678574485226`*^9, 3.8820678804864902`*^9}, {3.8820679166397614`*^9, 
-   3.8820679292456226`*^9}, {3.882068186978013*^9, 3.8820681988275704`*^9}},
- CellLabel->"In[29]:=",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
+   3.8820679292456226`*^9}, {3.882068186978013*^9, 3.8820681988275704`*^9}, {
+   3.882143766941361*^9, 3.88214396373497*^9}, {3.882144015287819*^9, 
+   3.88214401654539*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Cloud deployment", "Subsection",
+ CellChangeTimes->{{3.88214374092651*^9, 
+  3.882143744213297*^9}},ExpressionUUID->"8db4dca2-4fee-42ba-880a-\
+212cf85fa7df"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", 
+  RowBox[{"pportrait", ",", 
+   RowBox[{"Permissions", "->", "\"\<Public\>\""}]}], "]"}]], "Code",
+ CellChangeTimes->{{3.882143776841402*^9, 3.8821437951991568`*^9}, {
+  3.882144031903954*^9, 3.882144032484768*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"f31a03e1-f17a-47fe-a50f-518c2e78329c"],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"CloudObject", "[", 
    TemplateBox[{
-    "\"https://www.wolframcloud.com/obj/ba4ae757-1995-47df-beb8-280fb4108643\"\
-", "https://www.wolframcloud.com/obj/ba4ae757-1995-47df-beb8-280fb4108643"},
+    "\"https://www.wolframcloud.com/obj/30e15e0d-89d6-477e-a740-82bc51857abd\"\
+", "https://www.wolframcloud.com/obj/30e15e0d-89d6-477e-a740-82bc51857abd"},
     "HyperlinkURL"], "]"}],
   CloudObject[
-  "https://www.wolframcloud.com/obj/ba4ae757-1995-47df-beb8-280fb4108643"],
+  "https://www.wolframcloud.com/obj/30e15e0d-89d6-477e-a740-82bc51857abd"],
   SelectWithContents->True]], "Output",
  CellChangeTimes->{
-  3.882066555098028*^9, {3.8820666848127346`*^9, 3.882066704228209*^9}, {
-   3.8820667406339197`*^9, 3.8820667678111835`*^9}, 3.8820668037025137`*^9, {
-   3.8820668338062673`*^9, 3.8820668623281527`*^9}, {3.8820669029652667`*^9, 
-   3.8820669200532107`*^9}, {3.882066967297656*^9, 3.8820670168137865`*^9}, 
-   3.8820671192979183`*^9, {3.8820671787652245`*^9, 3.8820672048656225`*^9}, 
-   3.882067247952669*^9, 3.88206728678901*^9, 3.8820673788822947`*^9, 
-   3.8820674554834223`*^9, 3.882067615057748*^9, 3.8820676560037165`*^9, 
-   3.8820677704607096`*^9, 3.882067827950362*^9, 3.882067887302038*^9, 
-   3.8820679343106346`*^9, 3.8820682048283005`*^9},
- CellLabel->"Out[29]=",ExpressionUUID->"33928d0d-995b-420c-8699-c076069d7013"]
+  3.882143994636043*^9, {3.882144026526033*^9, 3.8821440339076853`*^9}},
+ CellLabel->"Out[8]=",ExpressionUUID->"eb6400a1-f789-4800-ac63-4e7572643632"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{949, 497},
+WindowSize->{Full, Full},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-Magnification:>1. Inherited,
-FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (August 22, 2022)",
+SpellingDictionaries->{"CorrectWords"->{
+ "Representer\[CloseCurlyQuote]s", "Representer", "Osorio", "pportrait"}},
+Magnification:>2. Inherited,
+FrontEndVersion->"13.0 for Mac OS X ARM (64-bit) (December 2, 2021)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"4156979c-3c12-4b8b-bbcb-178a1b77cd10"
 ]
@@ -275,8 +569,38 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 8620, 211, 809, "Input",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
-Cell[9203, 235, 1150, 20, 35, "Output",ExpressionUUID->"33928d0d-995b-420c-8699-c076069d7013"]
+Cell[580, 22, 156, 3, 194, "Title",ExpressionUUID->"331ec153-d022-49ec-8232-a307003b2b8b"],
+Cell[739, 27, 289, 7, 158, "Subtitle",ExpressionUUID->"6bfeb5f5-1c54-4901-87ea-59d29ed5cee1"],
+Cell[CellGroupData[{
+Cell[1053, 38, 158, 3, 134, "Section",ExpressionUUID->"b02d3d9c-3e8e-4b6d-b5d5-57c9d32886ef"],
+Cell[1214, 43, 599, 12, 294, "Text",ExpressionUUID->"578e83f7-6a79-4a89-a23f-5ef478ba7f5a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1850, 60, 243, 4, 134, "Section",ExpressionUUID->"17083cd6-2c29-4d78-8ddf-cc99f496c74a"],
+Cell[2096, 66, 467, 11, 159, "Text",ExpressionUUID->"aa937040-2283-4bf3-9f03-2b06bf4939ef"],
+Cell[CellGroupData[{
+Cell[2588, 81, 1009, 27, 164, "Code",ExpressionUUID->"6f679c88-b364-4dd9-b5c5-392c5a5ace69"],
+Cell[3600, 110, 1783, 37, 714, "Output",ExpressionUUID->"a1469b18-5780-4307-9b45-c9e157245f48"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5420, 152, 489, 11, 164, "Code",ExpressionUUID->"5d322978-a108-42fd-b067-ce6ecb6d251b"],
+Cell[5912, 165, 4527, 114, 417, "Output",ExpressionUUID->"09cba5f5-3d56-4da4-837f-7113b900a490"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10488, 285, 153, 3, 134, "Section",ExpressionUUID->"9efded44-15c8-43d3-a7a5-40280e1f15ed"],
+Cell[CellGroupData[{
+Cell[10666, 292, 177, 3, 107, "Subsection",ExpressionUUID->"4cd0ee05-51a4-4652-896f-1cbf8a108cf7"],
+Cell[10846, 297, 8698, 215, 1266, "Code",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19581, 517, 163, 3, 107, "Subsection",ExpressionUUID->"8db4dca2-4fee-42ba-880a-212cf85fa7df"],
+Cell[CellGroupData[{
+Cell[19769, 524, 337, 6, 125, "Code",ExpressionUUID->"f31a03e1-f17a-47fe-a50f-518c2e78329c"],
+Cell[20109, 532, 568, 12, 139, "Output",ExpressionUUID->"eb6400a1-f789-4800-ac63-4e7572643632"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]
