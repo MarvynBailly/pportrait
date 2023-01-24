@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    256120,       5043]
-NotebookOptionsPosition[    253291,       4982]
-NotebookOutlinePosition[    253834,       5001]
-CellTagsIndexPosition[    253791,       4998]
+NotebookDataLength[    278381,       5617]
+NotebookOptionsPosition[    275227,       5551]
+NotebookOutlinePosition[    275770,       5570]
+CellTagsIndexPosition[    275727,       5567]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -122,8 +122,8 @@ Cell[BoxData[
       Hold[$CellContext`a$$], 1, 4}, {
       Hold[$CellContext`b$$], 0, 10}, {
       Hold[$CellContext`showAxes$$], {True, False}}}, Typeset`size$$ = {
-    540., {156., 164.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True}, 
+    360., {104., 109.37589556212379`}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`a$$ = 1, $CellContext`b$$ = 
@@ -138,7 +138,7 @@ Cell[BoxData[
       "Specifications" :> {{$CellContext`a$$, 1, 4}, {$CellContext`b$$, 0, 
          10}, {$CellContext`showAxes$$, {True, False}}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{606., {256., 265.}},
+     ImageSizeCache->{660., {135.134033203125, 140.865966796875}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -282,6 +282,638 @@ db71b20e8ac0?_embed=iframe\" width=\"600\" height=\"800\"></iframe>", "Title" ->
 ]]], "Output",
  CellChangeTimes->{3.8824011588645897`*^9},
  CellLabel->"Out[2]=",ExpressionUUID->"22664dbb-04bc-499d-8b10-f3e37de67b0b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\t", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"f1", "[", 
+      RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", 
+     RowBox[{
+      RowBox[{"\[Minus]", 
+       RowBox[{"(", 
+        RowBox[{"x", "\[Minus]", "y"}], ")"}]}], 
+      RowBox[{"(", 
+       RowBox[{"1", "\[Minus]", "x", "\[Minus]", "y"}], ")"}]}]}], ";"}], 
+   "\[IndentingNewLine]", "\t", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"f2", "[", 
+      RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", 
+     RowBox[{"x", 
+      RowBox[{"(", 
+       RowBox[{"2", "+", "y"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", "\t", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"F", "[", 
+      RowBox[{"x_", ",", "y_"}], "]"}], " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"f1", "[", 
+        RowBox[{"x", ",", "y"}], "]"}], ",", 
+       RowBox[{"f2", "[", 
+        RowBox[{"x", ",", "y"}], "]"}]}], "}"}]}], ";"}], "\n", "\t", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"J", "[", 
+      RowBox[{"x_", ",", "y_"}], "]"}], " ", ":=", " ", 
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"F", "[", 
+        RowBox[{"x", ",", "y"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}], "}"}]}], "]"}]}], ";"}], 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"f1", "[", 
+            RowBox[{"x", ",", "y"}], "]"}], ",", "x"}], "]"}], ",", 
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"f1", "[", 
+            RowBox[{"x", ",", "y"}], "]"}], ",", "y"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"f2", "[", 
+            RowBox[{"x", ",", "y"}], "]"}], ",", "x"}], "]"}], ",", 
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"f2", "[", 
+            RowBox[{"x", ",", "y"}], "]"}], ",", "y"}], "]"}]}], "}"}]}], 
+      "}"}], ";"}], "*)"}], "\n", "\t", 
+   RowBox[{
+    RowBox[{"fpList", " ", "=", " ", 
+     RowBox[{"Solve", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"F", "[", 
+            RowBox[{"x", ",", "y"}], "]"}], "[", 
+           RowBox[{"[", "1", "]"}], "]"}], " ", "==", " ", "0"}], ",", " ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"F", "[", 
+            RowBox[{"x", ",", "y"}], "]"}], "[", 
+           RowBox[{"[", "2", "]"}], "]"}], " ", "==", " ", "0"}]}], "}"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\t", 
+   RowBox[{
+    RowBox[{"systems", "=", 
+     RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", "\t", 
+   RowBox[{
+    RowBox[{"For", "[", 
+     RowBox[{
+      RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
+      RowBox[{"i", " ", "<=", " ", 
+       RowBox[{"Length", "[", "fpList", "]"}]}], ",", 
+      RowBox[{"i", "++"}], ",", "\n", "\t\t", 
+      RowBox[{
+       RowBox[{"fp", " ", "=", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"fpList", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "[", 
+           RowBox[{"[", "2", "]"}], "]"}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"fpList", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}], "}"}]}], ";", "\n", "\t\t", 
+       RowBox[{"j", " ", "=", " ", 
+        RowBox[{
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"F", "[", 
+            RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", "y"}], "}"}], "}"}]}], "]"}], " ", "/.", " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"x", " ", "->", " ", 
+            RowBox[{"fp", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+           RowBox[{"y", "->", 
+            RowBox[{"fp", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}]}], ";", "\n", "\t\t", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{"j", " ", "=", " ", 
+          RowBox[{"MatrixForm", "[", 
+           RowBox[{"J", "[", 
+            RowBox[{
+             RowBox[{"fp", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", 
+             RowBox[{"fp", "[", 
+              RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "]"}]}], ";"}], "*)"}],
+        "\n", "\t\t", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{"Print", "[", 
+          RowBox[{"CharacteristicPolynomial", "[", 
+           RowBox[{
+            RowBox[{"J", "[", 
+             RowBox[{
+              RowBox[{"fp", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{"fp", "[", 
+               RowBox[{"[", "2", "]"}], "]"}]}], "]"}], ",", "\[Lambda]"}], 
+           "]"}], "]"}], ";"}], "*)"}], "\n", "\t\t", 
+       RowBox[{"es", " ", "=", " ", 
+        RowBox[{"Eigensystem", "[", "j", "]"}]}], ";", "\[IndentingNewLine]", 
+       "\t\t", 
+       RowBox[{"AppendTo", "[", 
+        RowBox[{"systems", " ", ",", 
+         RowBox[{"{", 
+          RowBox[{"fp", ",", 
+           RowBox[{"MatrixForm", "[", "j", "]"}], ",", "es"}], "}"}]}], "]"}],
+        ";"}]}], "\[IndentingNewLine]", "\t\t", "]"}], ";"}], 
+   "\[IndentingNewLine]", "systems", "\[IndentingNewLine]", 
+   RowBox[{"Column", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Column", "[", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Style", "[", 
+          RowBox[{
+           RowBox[{"\"\<At the fixed points (\>\"", "<>", 
+            RowBox[{"ToString", "[", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<,\>\"", "<>", 
+            RowBox[{"ToString", "[", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", "\"\<)\>\""}], ",",
+            "Bold"}], "]"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<The Jacobian is\>\"", ",", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<The Eigenvalues are \>\"", "<>", 
+            RowBox[{"ToString", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", "3", "]"}], "]"}], "[", 
+               RowBox[{"[", "1", "]"}], "]"}], "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\< and \>\"", "<>",
+             " ", 
+            RowBox[{"ToString", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", "3", "]"}], "]"}], "[", 
+               RowBox[{"[", "1", "]"}], "]"}], "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Row", "[", 
+          RowBox[{"{", 
+           RowBox[{"\"\<The corresponding Eigenvectors are \>\"", ",", 
+            RowBox[{"MatrixForm", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", "3", "]"}], "]"}], "[", 
+               RowBox[{"[", "2", "]"}], "]"}], "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", " ", 
+            "\"\< and \>\"", ",", 
+            RowBox[{"MatrixForm", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", "3", "]"}], "]"}], "[", 
+               RowBox[{"[", "2", "]"}], "]"}], "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "}"}], "]"}]}], 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        "}"}], "]"}], "&"}], "/@", "systems"}], "\[IndentingNewLine]", "]"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.882727340637698*^9, 3.8827276326214123`*^9}, {
+  3.88272772164955*^9, 3.882727832200261*^9}, {3.882728078820619*^9, 
+  3.8827281481851463`*^9}, {3.882728217420113*^9, 3.882728221076376*^9}, {
+  3.882728302922468*^9, 3.882728347366955*^9}, {3.8827283910458527`*^9, 
+  3.882728446738057*^9}, {3.882728565184486*^9, 3.882728597791358*^9}, {
+  3.8827287127588816`*^9, 3.8827289426438723`*^9}, {3.8827291575815015`*^9, 
+  3.882729161940028*^9}, {3.8827292364584417`*^9, 3.882729376873339*^9}, {
+  3.882729408983794*^9, 3.882729569611853*^9}},
+ CellLabel->
+  "In[639]:=",ExpressionUUID->"22c45420-5c3b-4f20-8a67-a50e16d6c2d0"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "2"}], ",", 
+       RowBox[{"-", "2"}]}], "}"}], ",", 
+     TagBox[
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {
+          RowBox[{"-", "5"}], "5"},
+         {"0", 
+          RowBox[{"-", "2"}]}
+        },
+        GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}}], "\[NoBreak]", ")"}],
+      Function[BoxForm`e$, 
+       MatrixForm[BoxForm`e$]]], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "5"}], ",", 
+         RowBox[{"-", "2"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"5", ",", "3"}], "}"}]}], "}"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0"}], "}"}], ",", 
+     TagBox[
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {
+          RowBox[{"-", "1"}], "1"},
+         {"2", "0"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}}], "\[NoBreak]", ")"}],
+      Function[BoxForm`e$, 
+       MatrixForm[BoxForm`e$]]], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "2"}], ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "2"}], "}"}]}], "}"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "1"}], "}"}], ",", 
+     TagBox[
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {
+          RowBox[{"-", "1"}], 
+          RowBox[{"-", "1"}]},
+         {"3", "0"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}}], "\[NoBreak]", ")"}],
+      Function[BoxForm`e$, 
+       MatrixForm[BoxForm`e$]]], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          FractionBox["1", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", 
+            RowBox[{"\[ImaginaryI]", " ", 
+             SqrtBox["11"]}]}], ")"}]}], ",", 
+         RowBox[{
+          FractionBox["1", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "-", 
+            RowBox[{"\[ImaginaryI]", " ", 
+             SqrtBox["11"]}]}], ")"}]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            FractionBox["1", "6"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", 
+              RowBox[{"\[ImaginaryI]", " ", 
+               SqrtBox["11"]}]}], ")"}]}], ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            FractionBox["1", "6"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "-", 
+              RowBox[{"\[ImaginaryI]", " ", 
+               SqrtBox["11"]}]}], ")"}]}], ",", "1"}], "}"}]}], "}"}]}], 
+      "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"3", ",", 
+       RowBox[{"-", "2"}]}], "}"}], ",", 
+     TagBox[
+      RowBox[{"(", "\[NoBreak]", GridBox[{
+         {"5", "5"},
+         {"0", "3"}
+        },
+        GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.7]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}}], "\[NoBreak]", ")"}],
+      Function[BoxForm`e$, 
+       MatrixForm[BoxForm`e$]]], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"5", ",", "3"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "5"}], ",", "2"}], "}"}]}], "}"}]}], "}"}]}], "}"}]}],
+   "}"}]], "Output",
+ CellChangeTimes->{{3.882728107336216*^9, 3.8827281143205853`*^9}, 
+   3.8827282077326097`*^9, {3.8827285897552705`*^9, 3.8827285981507177`*^9}, {
+   3.8827287174437494`*^9, 3.8827287460648384`*^9}, {3.882728776439603*^9, 
+   3.8827288008279195`*^9}, {3.8827288469239273`*^9, 3.88272891053828*^9}, 
+   3.882728943768849*^9, 3.88272916442437*^9, {3.8827292406789284`*^9, 
+   3.882729301054695*^9}, 3.882729377638915*^9, {3.882729412209237*^9, 
+   3.882729479879134*^9}, {3.882729518512803*^9, 3.882729570143115*^9}},
+ CellLabel->
+  "Out[646]=",ExpressionUUID->"121663a8-cb61-49a0-8542-d9593adb67cb"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"At the fixed points (-2,-2)\"\>",
+          StripOnInput->False,
+          FontWeight->Bold]},
+        {
+         TemplateBox[{"\"The Jacobian is\"", 
+           TagBox[
+            RowBox[{"(", "\[NoBreak]", 
+              GridBox[{{
+                 RowBox[{"-", "5"}], "5"}, {"0", 
+                 RowBox[{"-", "2"}]}}, RowSpacings -> 1, ColumnSpacings -> 1, 
+               RowAlignments -> Baseline, ColumnAlignments -> Center], 
+              "\[NoBreak]", ")"}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]]},
+          "RowDefault"]},
+        {
+         TemplateBox[{"\"The Eigenvalues are -5 and -2\""},
+          "RowDefault"]},
+        {
+         TemplateBox[{"\"The corresponding Eigenvectors are \"", 
+           TagBox[
+            RowBox[{"(", "\[NoBreak]", 
+              TagBox[
+               
+               GridBox[{{"1"}, {"0"}}, ColumnAlignments -> Center, 
+                RowSpacings -> 1, ColumnAlignments -> Left], Column], 
+              "\[NoBreak]", ")"}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]], "\" and \"", 
+           TagBox[
+            RowBox[{"(", "\[NoBreak]", 
+              TagBox[
+               
+               GridBox[{{"5"}, {"3"}}, ColumnAlignments -> Center, 
+                RowSpacings -> 1, ColumnAlignments -> Left], Column], 
+              "\[NoBreak]", ")"}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]]},
+          "RowDefault"]}
+       },
+       DefaultBaseStyle->"Column",
+       GridBoxAlignment->{"Columns" -> {{Left}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Column"]},
+    {
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"At the fixed points (0,0)\"\>",
+          StripOnInput->False,
+          FontWeight->Bold]},
+        {
+         TemplateBox[{"\"The Jacobian is\"", 
+           TagBox[
+            RowBox[{"(", "\[NoBreak]", 
+              GridBox[{{
+                 RowBox[{"-", "1"}], "1"}, {"2", "0"}}, RowSpacings -> 1, 
+               ColumnSpacings -> 1, RowAlignments -> Baseline, 
+               ColumnAlignments -> Center], "\[NoBreak]", ")"}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]]},
+          "RowDefault"]},
+        {
+         TemplateBox[{"\"The Eigenvalues are -2 and 1\""},
+          "RowDefault"]},
+        {
+         TemplateBox[{"\"The corresponding Eigenvectors are \"", 
+           TagBox[
+            RowBox[{"(", "\[NoBreak]", 
+              TagBox[
+               GridBox[{{
+                  RowBox[{"-", "1"}]}, {"1"}}, ColumnAlignments -> Center, 
+                RowSpacings -> 1, ColumnAlignments -> Left], Column], 
+              "\[NoBreak]", ")"}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]], "\" and \"", 
+           TagBox[
+            RowBox[{"(", "\[NoBreak]", 
+              TagBox[
+               
+               GridBox[{{"1"}, {"2"}}, ColumnAlignments -> Center, 
+                RowSpacings -> 1, ColumnAlignments -> Left], Column], 
+              "\[NoBreak]", ")"}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]]},
+          "RowDefault"]}
+       },
+       DefaultBaseStyle->"Column",
+       GridBoxAlignment->{"Columns" -> {{Left}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Column"]},
+    {
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"At the fixed points (0,1)\"\>",
+          StripOnInput->False,
+          FontWeight->Bold]},
+        {
+         TemplateBox[{"\"The Jacobian is\"", 
+           TagBox[
+            RowBox[{"(", "\[NoBreak]", 
+              GridBox[{{
+                 RowBox[{"-", "1"}], 
+                 RowBox[{"-", "1"}]}, {"3", "0"}}, RowSpacings -> 1, 
+               ColumnSpacings -> 1, RowAlignments -> Baseline, 
+               ColumnAlignments -> Center], "\[NoBreak]", ")"}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]]},
+          "RowDefault"]},
+        {
+         TemplateBox[{
+          "\"The Eigenvalues are -1 + I Sqrt[11]\\n---------------\\n       2 \
+and -1 - I Sqrt[11]\\n---------------\\n       2\""},
+          "RowDefault"]},
+        {
+         TemplateBox[{"\"The corresponding Eigenvectors are \"", 
+           TagBox[
+            RowBox[{"(", "\[NoBreak]", 
+              TagBox[
+               GridBox[{{
+                  RowBox[{
+                    FractionBox["1", "6"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], "+", 
+                    RowBox[{"\[ImaginaryI]", " ", 
+                    SqrtBox["11"]}]}], ")"}]}]}, {"1"}}, RowSpacings -> 1, 
+                ColumnAlignments -> Center, ColumnAlignments -> Left], 
+               Column], "\[NoBreak]", ")"}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]], "\" and \"", 
+           TagBox[
+            RowBox[{"(", "\[NoBreak]", 
+              TagBox[
+               GridBox[{{
+                  RowBox[{
+                    FractionBox["1", "6"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], "-", 
+                    RowBox[{"\[ImaginaryI]", " ", 
+                    SqrtBox["11"]}]}], ")"}]}]}, {"1"}}, RowSpacings -> 1, 
+                ColumnAlignments -> Center, ColumnAlignments -> Left], 
+               Column], "\[NoBreak]", ")"}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]]},
+          "RowDefault"]}
+       },
+       DefaultBaseStyle->"Column",
+       GridBoxAlignment->{"Columns" -> {{Left}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Column"]},
+    {
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"At the fixed points (3,-2)\"\>",
+          StripOnInput->False,
+          FontWeight->Bold]},
+        {
+         TemplateBox[{"\"The Jacobian is\"", 
+           TagBox[
+            RowBox[{"(", "\[NoBreak]", 
+              
+              GridBox[{{"5", "5"}, {"0", "3"}}, RowSpacings -> 1, 
+               ColumnSpacings -> 1, RowAlignments -> Baseline, 
+               ColumnAlignments -> Center], "\[NoBreak]", ")"}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]]},
+          "RowDefault"]},
+        {
+         TemplateBox[{"\"The Eigenvalues are 5 and 3\""},
+          "RowDefault"]},
+        {
+         TemplateBox[{"\"The corresponding Eigenvectors are \"", 
+           TagBox[
+            RowBox[{"(", "\[NoBreak]", 
+              TagBox[
+               
+               GridBox[{{"1"}, {"0"}}, ColumnAlignments -> Center, 
+                RowSpacings -> 1, ColumnAlignments -> Left], Column], 
+              "\[NoBreak]", ")"}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]], "\" and \"", 
+           TagBox[
+            RowBox[{"(", "\[NoBreak]", 
+              TagBox[
+               GridBox[{{
+                  RowBox[{"-", "5"}]}, {"2"}}, ColumnAlignments -> Center, 
+                RowSpacings -> 1, ColumnAlignments -> Left], Column], 
+              "\[NoBreak]", ")"}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]]},
+          "RowDefault"]}
+       },
+       DefaultBaseStyle->"Column",
+       GridBoxAlignment->{"Columns" -> {{Left}}},
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Column"]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{{3.882728107336216*^9, 3.8827281143205853`*^9}, 
+   3.8827282077326097`*^9, {3.8827285897552705`*^9, 3.8827285981507177`*^9}, {
+   3.8827287174437494`*^9, 3.8827287460648384`*^9}, {3.882728776439603*^9, 
+   3.8827288008279195`*^9}, {3.8827288469239273`*^9, 3.88272891053828*^9}, 
+   3.882728943768849*^9, 3.88272916442437*^9, {3.8827292406789284`*^9, 
+   3.882729301054695*^9}, 3.882729377638915*^9, {3.882729412209237*^9, 
+   3.882729479879134*^9}, {3.882729518512803*^9, 3.882729570158723*^9}},
+ CellLabel->
+  "Out[647]=",ExpressionUUID->"a54cf546-e96b-4833-90d4-79290de47d89"]
 }, Open  ]]
 }, Open  ]],
 
@@ -465,7 +1097,6 @@ Cell[BoxData[
        "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", 
        RowBox[{"(*", 
         RowBox[{"Print", " ", "Field"}], "*)"}], "\[IndentingNewLine]", "\t", 
-       
        RowBox[{"Column", "[", 
         RowBox[{"{", "\n", "\t\t", 
          RowBox[{"(*", 
@@ -839,9 +1470,8 @@ $CellContext`y),
           Manipulate`Place[2]}, {
           Manipulate`Place[3], 
           Manipulate`Place[4]}}]], Manipulate`Dump`ThisIsNotAControl}}, 
-    Typeset`size$$ = {1078., {552.7010498046875, 561.2989501953125}}, 
+    Typeset`size$$ = {380., {409.4340332031251, 415.1659667968751}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
-    
     DynamicBox[Manipulate`ManipulateBoxes[
      2, StandardForm, 
       "Variables" :> {$CellContext`f$$ = (
@@ -954,11 +1584,11 @@ y) =\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)",
 RowBox[{StyleBox[\"x\", \"TI\"], \",\", StyleBox[\"y\", \"TI\"]}], \")\"}], \
 \"\[Element]\"}], TraditionalForm], \"errors\" -> {}, \"input\" -> \
 \"(x,y)\\\\in\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\) ", 
-             Map["(" <> ToString[
-                Part[
-                 Part[#, 1], 2]] <> "," <> ToString[
-                Part[
-                 Part[#, 2], 2]] <> ")"& , $CellContext`fpList$]}], 
+             Map[((("(" <> ToString[
+                   Part[
+                    Part[#, 1], 2]]) <> ",") <> ToString[
+                 Part[
+                  Part[#, 2], 2]]) <> ")"& , $CellContext`fpList$]}], 
            Style["Local Behavior", 18, Bold], "Systems: ", 
            Column[$CellContext`systems$]}]], "Specifications" :> {
         Style["Dynamical System", Large, Bold], 
@@ -1005,7 +1635,7 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[LongEqual]\"}], TraditionalForm], \
            Manipulate`Place[2]}, {
            Manipulate`Place[3], 
            Manipulate`Place[4]}}]}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{1144., {688., 696.}},
+     ImageSizeCache->{428., {507.134033203125, 512.865966796875}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1200,7 +1830,7 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
       "Specifications" :> {{{$CellContext`T$$, 10}, 1, 
          100}, {{$CellContext`point$$, {1, 0}}, Automatic, ControlType -> 
          Locator}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{616., {339., 347.}},
+     ImageSizeCache->{815., {301.134033203125, 306.865966796875}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1249,6 +1879,7 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999997`, 1.}}], {
                LABColor[
                0.6173509721991544, 0.5362257959695772, 0.6113566980572849], 
+               
                Arrow[{{-1.8666028479667802`, 
                 2.2470999772968194`}, {-1.8329109608047953`, 
                 2.2529353316441307`}, {-1.7136443082012207`, 
@@ -1321,7 +1952,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.5212794851751799, 0.5299656094998986, 0.18335582795117764`], 
                
-               
                Arrow[{{1.7112076052292324`, 1.2465246542603041`}, {
                 1.7521839571485853`, 1.2042797068859619`}, {
                 1.8328897879795016`, 1.1172709624792692`}, {
@@ -1391,7 +2021,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.4605520338543691, 0.5260085023407084, -0.08718648184097842], 
                
-               
                Arrow[{{0.6615380878716799, -1.4804406165046715`}, {
                 0.6380143577792248, -1.4849948992265576`}, {
                 0.48630047980733804`, -1.5014618307319967`}, {
@@ -1402,7 +2031,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.46149724357880173`, 0.52607009386293, -0.08297554895108838], 
-               
                
                Arrow[{{
                 0.010200844930745299`, -1.4627483151585934`}, \
@@ -1488,7 +2116,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.354768115679515, 0.5222995138955004, -0.46023939918772805`], 
                
-               
                Arrow[{{0.5499183593956218, 0.6437083695190056}, {
                 0.5805443263838077, 0.6109589135116564}, {0.6278298616543683, 
                 0.5531606006403297}, {0.7079871691062952, 
@@ -1511,7 +2138,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.30754401986731433`, 0.5223838367182934, -0.573102413587318], 
-               
                
                Arrow[{{0.5874406030139314, -0.5199432969621158}, {
                 0.5712135007191638, -0.5345967773910376}, {
@@ -1598,7 +2224,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.22196680918538012`, 0.522536642438495, -0.7776272815674591], 
                
-               
                Arrow[{{0.16678762425367138`, 0.053368752066810826`}, {
                 0.1749201366136576, -0.02657511193035675}, {
                 0.14412864537276407`, -0.0982763873589417}, {
@@ -1610,7 +2235,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.020000000000000004`, 1.}}], {
                LABColor[
                0.4626038886297521, 0.5261422047939596, -0.07804541765638717], 
-               
                
                Arrow[{{-3.8937342059530105`, 
                 1.1544224264983334`}, {-3.8005956169469934`, 
@@ -1691,7 +2315,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.489148216838883, 0.5278718797417414, 0.040210226362685716`], 
                
-               
                Arrow[{{-0.3195991401351671, 
                 1.638089836408316}, {-0.19551136542366737`, 
                 1.6279656821328794`}, {-0.055579645931840824`, 
@@ -1713,7 +2336,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.4658008720641635, 0.5263505258375892, -0.06380277674356959], 
-               
                
                Arrow[{{0.8566333156101207, 1.119665335099216}, {
                 0.9046124215428143, 1.0755749874398333`}, {0.9940480495425602,
@@ -1785,7 +2407,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.37144111128194296`, 0.522269742779094, -0.4203918486862961], 
                
-               
                Arrow[{{-0.5335994509910831, -0.7609650659907807}, \
 {-0.5624856365794074, -0.7346613308573436}, {-0.6195468310781399, \
 -0.6755145992819485}, {-0.6716727942648568, -0.6140011786708204}, \
@@ -1808,7 +2429,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.31753092107644343`, 0.522366004218032, -0.5492342641693674], 
-               
                
                Arrow[{{-0.7748752360000785, 
                 0.4142026772972267}, {-0.7203547358310942, 
@@ -1835,6 +2455,7 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.3120262306950515, 0.5223758333322498, -0.5623901740728834], 
+               
                Arrow[{{0.37223670895536637`, 0.49752947399650327`}, {
                 0.4069661214148604, 0.4632226855488094}, {0.4560022240759863, 
                 0.4043849751846773}, {0.5335635066502513, 
@@ -1859,7 +2480,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.27615946180583056`, 0.522439876637795, -0.6481097963121105], 
-               
                
                Arrow[{{0.13975930022574032`, -0.4934057356663163}, {
                 0.06869865175936045, -0.4919811121232084}, \
@@ -1932,7 +2552,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.5375828284627703, 0.5310279639218097, 0.25598762879949777`], 
                
-               
                Arrow[{{-2.3633967639907625`, -1.5383433881068136`}, \
 {-2.4384499121758427`, -1.4861822211572104`}, {-2.482156522848857, \
 -1.4562398317958702`}, {-2.5249825561608805`, -1.4275159685653016`}, \
@@ -1991,7 +2610,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.5290844556392198, 0.5304741950543517, 0.21812716597499676`], 
                
-               
                Arrow[{{2.639446629067379, -1.8400588529586226`}, {
                 2.5635028511856564`, -1.8435703048000445`}, {
                 2.4555790352599347`, -1.8509204307736402`}, {
@@ -2003,7 +2621,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999997`, 1.}}], {
                LABColor[
                0.5561067691761419, 0.5322350163638109, 0.33851224654730533`], 
-               
                
                Arrow[{{1.990461426399983, -1.928153105597445}, {
                 1.9028141574214852`, -1.947958511544696}, {
@@ -2263,7 +2880,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.5093596326566426, 0.5291888910190188, 0.13025258777548193`], 
                
-               
                Arrow[{{3.872018227531268, 1.7323918442481778`}, {
                 3.872018227531268, 1.7323918442481778`}}]}}}}, {
             Hue[0.67, 0.6, 0.6], 
@@ -2272,7 +2888,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.020000000000000004`, 1.}}], {
                LABColor[
                0.7796610882837383, 0.22968253021904694`, 0.8075366772887945], 
-               
                
                Arrow[{{-1.6751665246873217`, -2.8927406407240253`}, \
 {-1.7505392925697965`, -2.8490869847053863`}, {-1.824757830465211, \
@@ -2303,7 +2918,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.016524623212445022`, 1.}}], {
                LABColor[
                0.5899718994764924, 0.5344417276063179, 0.48938224641719125`], 
-               
                
                Arrow[{{-3.4721368550214526`, -2.1342885906757902`}, \
 {-3.5816353052714103`, -2.1260539269604575`}, {-3.693835671153347, \
@@ -2416,7 +3030,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.4794355658478662, 0.5272389863807435, -0.00305987597428289], 
-               
                
                Arrow[{{-0.8561151984911438, -1.194509186548034}, \
 {-0.8963345573094752, -1.158423220081408}, {-0.951102134501049, \
@@ -2540,7 +3153,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.7050129018452796, 0.39990389150374406`, 0.7658935715730314], 
                
-               
                Arrow[{{-0.3173918065236673, 
                 2.813769557560576}, {-0.3068146718679101, 
                 2.812337746400779}, {-0.22494555518615394`, 
@@ -2554,7 +3166,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.7026871504819779, 0.40520733666375913`, 0.7645961320167417], 
-               
                
                Arrow[{{0.316755908594792, 2.651223746984732}, {
                 0.33270151554178146`, 2.6453637375241925`}, {
@@ -2588,7 +3199,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.020000000000000004`, 1.}}], {
                LABColor[
                0.5765814831202557, 0.5335691846084588, 0.42972760767799695`], 
-               
                
                Arrow[{{1.971935315427754, 1.6042169429119262`}, {
                 2.0076051934310315`, 1.574890554833075}, {2.107089200510844, 
@@ -2639,7 +3249,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.7569785574301406, 0.28140584010099107`, 0.7948830406057903], 
                
-               
                Arrow[{{3.9901110985941415`, -2.851805918155363}, {
                 3.901691139846639, -2.807711635296629}, {
                 3.8146045297445603`, -2.765814323884322}, {
@@ -2685,8 +3294,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999997`, 1.}}], {
                LABColor[
                0.6668366601615819, 0.48695773886666743`, 0.7445966406747118], 
-               
-               
                Arrow[{{1.4444539894848272`, -2.5491143949286497`}, {
                 1.3789950652910659`, -2.558136984899186}, {
                 1.230841154837456, -2.576602679404288}, {
@@ -2852,6 +3459,7 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999997`, 1.}}], {
                LABColor[
                0.49775434090299947`, 0.5284326698688799, 0.07855072365054122], 
+               
                Arrow[{{-3.404575570814305, 
                 1.5550802682670035`}, {-3.3195380648158404`, 
                 1.5217179434280355`}, {-3.2344719289691177`, 
@@ -2936,7 +3544,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.5443048593565442, 0.5314659832359009, 0.28593444403612905`], 
-               
                
                Arrow[{{0.4149621594251063, 1.7253474043449861`}, {
                 0.4327224364695138, 1.717142206836709}, {0.50347068161329, 
@@ -3074,7 +3681,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.7857698285366301, 0.21575267966013018`, 0.8109444883593426], 
                
-               
                Arrow[{{2.0104533216515414`, 2.980887399134625}, {
                 2.080514032216734, 2.943132166623556}, {2.149670843571048, 
                 2.9062910887888327`}, {2.2852727686470446`, 
@@ -3086,7 +3692,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.7189524593455654, 0.36811731279883264`, 0.7736698685510421], 
                
-               
                Arrow[{{2.596707275864538, 2.68702329323158}, {
                 2.67437282847041, 2.653361818084519}, {2.798614039460705, 
                 2.603962877418438}, {2.9206753123949487`, 
@@ -3097,7 +3702,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999997`, 1.}}], {
                LABColor[
                0.6618047234204526, 0.49843213848493084`, 0.7417895333133209], 
-               
                
                Arrow[{{3.217456079475664, 2.478449775560698}, {
                 3.277076301377536, 2.4653752823443713`}, {3.3495592995764176`,
@@ -3120,6 +3724,7 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.41662468993551893`, 0.5231461196237521, -0.2828838942691459], 
+               
                Arrow[{{-4., 0.8394871285547871}, {-3.9848229213899975`, 
                 0.8222982491339007}, {-3.897407219239708, 
                 0.719346455630994}, {-3.8211049953039016`, 
@@ -3149,7 +3754,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999997`, 1.}}], {
                LABColor[
                0.3955624663803959, 0.522226671954412, -0.36274312506349343`], 
-               
                
                Arrow[{{-3.80620755967524, 
                 0.8303133159361711}, {-3.70648297255892, 
@@ -3254,7 +3858,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999997`, 1.}}], {
                LABColor[
                0.7704593006084738, 0.25066550246617014`, 0.8024033842348374], 
-               
                
                Arrow[{{-2.4196413587115577`, -2.9852632587768433`}, \
 {-2.55014404601836, -2.9259688101263164`}, {-2.6783981666023293`, \
@@ -3390,7 +3993,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.5236317807002417, 0.5301188891989522, 0.19383536316667788`], 
                
-               
                Arrow[{{1.4609952187090753`, -1.7241224669543815`}, {
                 1.4344617961966202`, -1.7327674271780187`}, {
                 1.360539793501063, -1.7558659915530708`}, {
@@ -3404,7 +4006,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.5407312626759941, 0.5312331214130993, 0.27001398172141483`], 
-               
                
                Arrow[{{0.8247030843877602, -1.8803475531399492`}, {
                 0.818624300375584, -1.8812972842644426`}, {
@@ -3431,7 +4032,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.5383364106032736, 0.5310770686548154, 0.25934485602500484`], 
                
-               
                Arrow[{{-0.45090778640978274`, -1.681407564125886}, \
 {-0.5091824135023787, -1.6515374356638581`}, {-0.5787239594239239, \
 -1.6126585907086286`}, {-0.6465179297565689, -1.5714498273116522`}, \
@@ -3442,7 +4042,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.5116541274603668, 0.5293384043217685, 0.14047461933623823`], 
-               
                
                Arrow[{{-0.9905547392639553, -1.3117715867566597`}, \
 {-1.0143091840511436`, -1.2914593683422606`}, {-1.1202965148048734`, \
@@ -3521,7 +4120,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.7280589346618902, 0.34735168273053574`, 0.7787499908204336], 
                
-               
                Arrow[{{-3.7395619812392322`, 
                 2.731263674074331}, {-3.65056989563635, 
                 2.691865118151863}, {-3.5628051286406204`, 
@@ -3562,7 +4160,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.6592733172560554, 0.5042045413231889, 0.7403773675321678], 
-               
                Arrow[{{-1.8183695942793312`, 
                 2.497040284727509}, {-1.7112101701361122`, 
                 2.512052581331946}, {-1.5681639956575142`, 
@@ -3586,7 +4183,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.6716702887228222, 0.47593554431787904`, 0.7472931201843969], 
                
-               
                Arrow[{{-0.5132712984807196, 
                 2.601795509416576}, {-0.39534216126917565`, 
                 2.591837988841995}, {-0.2488877651015421, 
@@ -3597,7 +4193,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999997`, 1.}}], {
                LABColor[
                0.6702255401637383, 0.47923002578052143`, 0.7464871552996608], 
-               
                
                Arrow[{{0.13101864866251053`, 2.4856845415081614`}, {
                 0.13840555619812936`, 2.4836277491753407`}, {
@@ -3632,7 +4227,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.5560210222259551, 0.5322294289422563, 0.33813024174623774`], 
                
-               
                Arrow[{{1.7859569206045436`, 1.4519385801518772`}, {
                 1.8263752314108843`, 1.4147577470809567`}, {
                 1.9086864289488354`, 1.3371162287962512`}, {1.986436123129758,
@@ -3656,7 +4250,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.32224271160027285`, 0.5223575908970242, -0.537973341697636], 
                
-               
                Arrow[{{2.705913368887192, 0.516973681100836}, {
                 2.7384527352222725`, 0.48232231562708316`}, {2.79705805420949,
                  0.4202966272417802}, {2.8482113132188482`, 
@@ -3676,7 +4269,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.7424409604924656, 0.31455613696157725`, 0.7867731224013091], 
                
-               
                Arrow[{{0.1582524482901052, 2.9702336225464188`}, {
                 0.27480311093308624`, 2.932833023136656}, {
                 0.38965723566871446`, 2.8917178651074513`}, {
@@ -3687,6 +4279,7 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999997`, 1.}}], {
                LABColor[
                0.7351820299993538, 0.3311087833011793, 0.7827236682306142], 
+               
                Arrow[{{0.7660555064810108, 2.725613034983405}, {
                 0.8311551298925035, 2.6929707006472836`}, {0.9363350330348793,
                  2.636856566834713}, {1.039341785447307, 
@@ -3696,7 +4289,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999997`, 1.}}], {
                LABColor[
                0.7086316380059291, 0.39165203402688825`, 0.7679123133494258], 
-               
                
                Arrow[{{1.3335658626929479`, 2.3972970942930067`}, {
                 1.3342693354048667`, 2.3968481747053123`}, {
@@ -3720,7 +4312,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999997`, 1.}}], {
                LABColor[
                0.5552228842095562, 0.5321774208702886, 0.33457451698267465`], 
-               
                
                Arrow[{{2.411508552515821, 1.64955364012683}, {
                 2.419370849908048, 1.6443752974954664`}, {2.5140312977450225`,
@@ -3747,7 +4338,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.007646840288174334, 1.}}], {
                LABColor[
                0.4171045422349026, 0.5231773876405706, -0.2807461403109149], 
-               
                Arrow[{{3.636135483405879, 1.2722765374640799`}, {
                 3.6413756224087632`, 1.2727998365594173`}, {
                 3.7187791719980634`, 1.2844159085765439`}, {
@@ -3827,7 +4417,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.6957760775015489, 0.42096675838308467`, 0.7607407330249575], 
                
-               
                Arrow[{{0.2954775836776494, -2.7477826814903117`}, {
                 0.28840350021360767`, -2.746796098504878}, {
                 0.20651793132146376`, -2.733118461142435}, {
@@ -3852,7 +4441,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.6809649985324749, 0.45474068035625176`, 0.7524782506164645], 
                
-               
                Arrow[{{-0.926006198571794, -2.2930794367101384`}, \
 {-0.9335150152316131, -2.2886630906609198`}, {-1.001212346890789, \
 -2.247219405077254}, {-1.0676831965286464`, -2.2049873898978904`}, \
@@ -3872,7 +4460,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.5583392474556967, 0.5323804885611554, 0.34845799294658825`], 
-               
                
                Arrow[{{-1.9736805741635404`, -1.5060441660026813`}, \
 {-2.0341060073616224`, -1.4540510598616552`}, {-2.116402028557675, \
@@ -3916,7 +4503,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.6946382751776724, 0.42356130581529633`, 0.7601060006259875], 
-               
                
                Arrow[{{3.727898126829104, -2.504162822509708}, {
                 3.5890781434581847`, -2.441935995267071}, {
@@ -4078,7 +4664,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.4632008659170911, 0.5261811048802668, -0.07538586895646016], 
                
-               
                Arrow[{{-0.7149874382837591, 
                 1.4842334725764756`}, {-0.6706128453118638, 
                 1.4935600366808908`}, {-0.5187507173660755, 
@@ -4104,6 +4689,7 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019603589268907574`, 1.}}], {
                LABColor[
                0.2900539689298627, 0.5224150667596626, -0.6149026817947438], 
+               
                Arrow[{{3.7406094906864498`, -0.033981940111267844`}, {
                 3.7405190934808994`, -0.03293641138104197}, {3.74149978914898,
                  0.01241552408635238}, {3.746095175644, 
@@ -4187,7 +4773,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.5105674574107459, 0.5292675949968338, 0.13563347717051022`], 
                
-               
                Arrow[{{-0.8368610602336467, 
                 1.7213448199154855`}, {-0.8368610602336467, 
                 1.7213448199154855`}}]}}}}, {
@@ -4197,6 +4782,7 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999993`, 1.}}], {
                LABColor[
                0.6526641896712854, 0.5192754325003146, 0.7366904112666133], 
+               
                Arrow[{{-3.8691169303708226`, 
                 2.161279521705196}, {-3.7582938742586363`, 
                 2.101446016602728}, {-3.650148515583669, 
@@ -4208,7 +4794,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999997`, 1.}}], {
                LABColor[
                0.5585534474203022, 0.5323944462062566, 0.34941225912969653`], 
-               
                
                Arrow[{{-3.271329836571741, 
                 1.8937793438710213`}, {-3.2420760615427344`, 
@@ -4224,7 +4809,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.5216695864475237, 0.5299910291824972, 0.18509373884612465`], 
                
-               
                Arrow[{{-2.6252667880798266`, 
                 1.8031000732922506`}, {-2.5311076980847513`, 
                 1.8071278069485412`}, {-2.4288151392438952`, 
@@ -4236,7 +4820,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999997`, 1.}}], {
                LABColor[
                0.5507454728060672, 0.5318856648961117, 0.31462753754185374`], 
-               
                
                Arrow[{{-1.9773326121588113`, 
                 1.897659278678501}, {-1.8514591418957238`, 
@@ -4271,7 +4854,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.5913603724263902, 0.5345322029371753, 0.49556792802870486`], 
                
-               
                Arrow[{{-0.04042679784811124, 2.095325613335769}, {
                 0.049865794579371375`, 2.0744778093272904`}, {
                 0.19406558090100515`, 2.030564156540557}, {0.3349706433686767,
@@ -4281,7 +4863,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.5850420294239733, 0.5341204886335896, 0.4674195524134885], 
-               
                Arrow[{{0.5715925833773591, 1.8651684360535996`}, {
                 0.6045051054300121, 1.8482285145810433`}, {0.7319080541835139,
                  1.7733921980600147`}, {0.85386062603135, 
@@ -4400,7 +4981,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.7916914567860651, 0.20224950336432368`, 0.8142479174574355], 
                
-               
                Arrow[{{1.4616919869069958`, 2.978148634231089}, {
                 1.5903714383145189`, 2.902257205323036}, {1.7155935791402923`,
                  2.8273127655819748`}, {1.8375758743128419`, 
@@ -4421,7 +5001,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.020000000000000004`, 1.}}], {
                LABColor[
                0.6674117493101195, 0.48564635459338923`, 0.7449174588934944], 
-               
                
                Arrow[{{2.603349385870535, 2.3328389721522362`}, {
                 2.6876109814555984`, 2.2943453399675993`}, {
@@ -4445,7 +5024,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.003956064916231538, 1.}}], {
                LABColor[
                0.5782425385929295, 0.5336774218942294, 0.43712765122495983`], 
-               
                
                Arrow[{{3.873933650237099, 2.0804199378473274`}, {
                 3.9273969873054386`, 2.084041088596302}, {4., 
@@ -4472,7 +5050,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.005296574853446859, 1.}}], {
                LABColor[
                0.27095430080099664`, 0.5224491709156731, -0.660549847335575], 
-               
                
                Arrow[{{2.6852864968551895`, -0.28211822000621956`}, {
                 2.6846533414325604`, -0.2830183458639302}, {
@@ -4513,8 +5090,9 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                 2.5900068261968707`, 0.8529236879068969}, {
                 2.6600003287039358`, 0.7935003797307904}, {2.725180130614195, 
                 0.7403532663115424}, {2.7860579228693916`, 
-                0.6931863617478381}, {2.8848198016527444`, 0.6233556288057049}
-                , {2.9626089484464924`, 0.5764657842555633}}]}}, {
+                0.6931863617478381}, {2.8848198016527444`, 
+                0.6233556288057049}, {2.9626089484464924`, 
+                0.5764657842555633}}]}}, {
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.3027545395429641, 0.5223923887613492, -0.584549010446755], 
@@ -4607,7 +5185,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.7395007923746713, 0.32126064571517454`, 0.7851329253972954], 
                
-               
                Arrow[{{-3.134344356768345, -2.989007372028358}, \
 {-3.262184701872749, -2.9593602213089576`}, {-3.388634570099029, \
 -2.9355045497707373`}, {-3.4731190331794846`, -2.9214232503402937`}, \
@@ -4618,7 +5195,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.7135370299613166, 0.38046619635125417`, 0.7706488266596837], 
                
-               
                Arrow[{{-3.7823991518866094`, -2.897831429696388}, \
 {-3.7960408326804, -2.8974245697591297`}, {-3.8755715873305405`, \
 -2.8967942207119997`}}]}}}}, {
@@ -4628,7 +5204,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999993`, 1.}}], {
                LABColor[
                0.7737463914238866, 0.24316990076488482`, 0.8042371149234777], 
-               
                
                Arrow[{{-2.081691809887543, -2.9121393696364564`}, \
 {-2.2110568862880084`, -2.8425292712799672`}, {-2.337597476780109, \
@@ -4668,7 +5243,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.7514307843191526, 0.29405650900678637`, 0.7917881696762948], 
                
-               
                Arrow[{{-0.4282535468420983, -2.9491790604904033`}, \
 {-0.543808197684945, -2.902375471957776}, {-0.6575858549743108, \
 -2.8518533016844794`}, {-0.7693519855581087, -2.798384468226696}, \
@@ -4707,7 +5281,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.5226806141128563, 0.5300569095171006, 0.18959789230380641`], 
                
-               
                Arrow[{{-2.669194244801346, -1.595088066401896}, \
 {-2.707191024287746, -1.5746630837391}, {-2.7965402021157346`, \
 -1.5306716484331373`}, {-2.883529685082627, -1.4919864330440609`}, \
@@ -4741,7 +5314,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.7334441862388272, 0.33507161407752806`, 0.7817541977733949], 
                
-               
                Arrow[{{2.9882912878914807`, -2.982279363361568}, {
                 2.8742858243699088`, -2.9616396690317113`}, {
                 2.760831674580252, -2.9451288441721513`}, {
@@ -4764,7 +5336,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.7227205150364815, 0.35952495979327004`, 0.7757719094574085], 
-               
                
                Arrow[{{1.6815894704055494`, -2.9543358678810128`}, {
                 1.6343520116671957`, -2.9582391490898323`}, {
@@ -4816,7 +5387,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
                LABColor[
                0.5714984889640141, 0.5332379678007662, 0.40708274197426564`], 
                
-               
                Arrow[{{-3.0319362889082355`, -1.9625894904716266`}, \
 {-3.037905502055831, -1.9606325536054805`}, {-3.140774088014167, \
 -1.9321686193069136`}, {-3.1988223797984263`, -1.917633602852089}, \
@@ -4838,7 +5408,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.010530806982853106`, 1.}}], {
                LABColor[
                0.7610288003173572, 0.27217001146684117`, 0.7971425019641172], 
-               
                
                Arrow[{{2.5699900301345324`, 2.9683086338876903`}, {
                 2.6509649495804193`, 2.933308197104988}, {2.7309850564649465`,
@@ -4980,12 +5549,12 @@ Cell[BoxData[
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{Full, Full},
-WindowMargins->{{-6, Automatic}, {Automatic, 0}},
+WindowSize->{582, 418},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 SpellingDictionaries->{"CorrectWords"->{
  "Representer\[CloseCurlyQuote]s", "Representer", "Osorio", "pportrait"}},
-Magnification:>1.5 Inherited,
-FrontEndVersion->"13.0 for Mac OS X ARM (64-bit) (December 2, 2021)",
+Magnification:>1. Inherited,
+FrontEndVersion->"13.1 for Microsoft Windows (64-bit) (August 22, 2022)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"4156979c-3c12-4b8b-bbcb-178a1b77cd10"
 ]
@@ -5001,47 +5570,52 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 156, 3, 146, "Title",ExpressionUUID->"331ec153-d022-49ec-8232-a307003b2b8b"],
-Cell[739, 27, 339, 7, 119, "Subtitle",ExpressionUUID->"6bfeb5f5-1c54-4901-87ea-59d29ed5cee1"],
+Cell[580, 22, 156, 3, 98, "Title",ExpressionUUID->"331ec153-d022-49ec-8232-a307003b2b8b"],
+Cell[739, 27, 339, 7, 79, "Subtitle",ExpressionUUID->"6bfeb5f5-1c54-4901-87ea-59d29ed5cee1"],
 Cell[CellGroupData[{
-Cell[1103, 38, 158, 3, 101, "Section",ExpressionUUID->"b02d3d9c-3e8e-4b6d-b5d5-57c9d32886ef"],
-Cell[1264, 43, 647, 12, 226, "Text",ExpressionUUID->"578e83f7-6a79-4a89-a23f-5ef478ba7f5a"]
+Cell[1103, 38, 158, 3, 67, "Section",ExpressionUUID->"b02d3d9c-3e8e-4b6d-b5d5-57c9d32886ef"],
+Cell[1264, 43, 647, 12, 173, "Text",ExpressionUUID->"578e83f7-6a79-4a89-a23f-5ef478ba7f5a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1948, 60, 243, 4, 101, "Section",ExpressionUUID->"17083cd6-2c29-4d78-8ddf-cc99f496c74a"],
-Cell[2194, 66, 467, 11, 88, "Text",ExpressionUUID->"aa937040-2283-4bf3-9f03-2b06bf4939ef"],
+Cell[1948, 60, 243, 4, 105, "Section",ExpressionUUID->"17083cd6-2c29-4d78-8ddf-cc99f496c74a"],
+Cell[2194, 66, 467, 11, 104, "Text",ExpressionUUID->"aa937040-2283-4bf3-9f03-2b06bf4939ef"],
 Cell[CellGroupData[{
-Cell[2686, 81, 1193, 30, 108, "Code",ExpressionUUID->"6f679c88-b364-4dd9-b5c5-392c5a5ace69"],
-Cell[3882, 113, 1946, 39, 549, "Output",ExpressionUUID->"95a71f6d-f175-42d5-bab4-faacc7b5d726"]
+Cell[2686, 81, 1193, 30, 68, "Code",ExpressionUUID->"6f679c88-b364-4dd9-b5c5-392c5a5ace69"],
+Cell[3882, 113, 1985, 39, 295, "Output",ExpressionUUID->"95a71f6d-f175-42d5-bab4-faacc7b5d726"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5865, 157, 489, 11, 108, "Code",ExpressionUUID->"5d322978-a108-42fd-b067-ce6ecb6d251b"],
-Cell[6357, 170, 4480, 113, 304, "Output",ExpressionUUID->"22664dbb-04bc-499d-8b10-f3e37de67b0b"]
+Cell[5904, 157, 489, 11, 68, "Code",ExpressionUUID->"5d322978-a108-42fd-b067-ce6ecb6d251b"],
+Cell[6396, 170, 4480, 113, 191, "Output",ExpressionUUID->"22664dbb-04bc-499d-8b10-f3e37de67b0b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10913, 288, 8890, 238, 638, "Input",ExpressionUUID->"22c45420-5c3b-4f20-8a67-a50e16d6c2d0"],
+Cell[19806, 528, 5594, 170, 196, "Output",ExpressionUUID->"121663a8-cb61-49a0-8542-d9593adb67cb"],
+Cell[25403, 700, 8298, 215, 547, "Output",ExpressionUUID->"a54cf546-e96b-4833-90d4-79290de47d89"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10886, 289, 153, 3, 101, "Section",ExpressionUUID->"9efded44-15c8-43d3-a7a5-40280e1f15ed"],
+Cell[33750, 921, 153, 3, 67, "Section",ExpressionUUID->"9efded44-15c8-43d3-a7a5-40280e1f15ed"],
 Cell[CellGroupData[{
-Cell[11064, 296, 177, 3, 81, "Subsection",ExpressionUUID->"4cd0ee05-51a4-4652-896f-1cbf8a108cf7"],
+Cell[33928, 928, 177, 3, 54, "Subsection",ExpressionUUID->"4cd0ee05-51a4-4652-896f-1cbf8a108cf7"],
 Cell[CellGroupData[{
-Cell[11266, 303, 21483, 480, 1875, "Code",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
-Cell[32752, 785, 12895, 246, 1429, "Output",ExpressionUUID->"7ba067e0-1890-40aa-98ac-cc2fa73aac4f"]
+Cell[34130, 935, 21475, 479, 1160, "Code",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
+Cell[55608, 1416, 12926, 245, 1039, "Output",ExpressionUUID->"7ba067e0-1890-40aa-98ac-cc2fa73aac4f"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[45696, 1037, 163, 3, 81, "Subsection",ExpressionUUID->"8db4dca2-4fee-42ba-880a-212cf85fa7df"],
+Cell[68583, 1667, 163, 3, 54, "Subsection",ExpressionUUID->"8db4dca2-4fee-42ba-880a-212cf85fa7df"],
 Cell[CellGroupData[{
-Cell[45884, 1044, 338, 6, 78, "Code",ExpressionUUID->"f31a03e1-f17a-47fe-a50f-518c2e78329c"],
-Cell[46225, 1052, 611, 12, 73, "Output",ExpressionUUID->"20f5fe6f-c1da-4294-9fef-ec1ab0fea3a0"]
+Cell[68771, 1674, 338, 6, 50, "Code",ExpressionUUID->"f31a03e1-f17a-47fe-a50f-518c2e78329c"],
+Cell[69112, 1682, 611, 12, 85, "Output",ExpressionUUID->"20f5fe6f-c1da-4294-9fef-ec1ab0fea3a0"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[46885, 1070, 156, 3, 81, "Subsection",ExpressionUUID->"9d3f931d-6834-49bd-adb3-735ddd428686"],
+Cell[69772, 1700, 156, 3, 54, "Subsection",ExpressionUUID->"9d3f931d-6834-49bd-adb3-735ddd428686"],
 Cell[CellGroupData[{
-Cell[47066, 1077, 3012, 80, 340, "Code",ExpressionUUID->"80f476f1-442b-4252-8e46-bedd1c3293c1"],
-Cell[50081, 1159, 201912, 3785, 714, "Output",ExpressionUUID->"ed414ecc-e910-43ad-b23b-ae4b4c68b9a2"]
+Cell[69953, 1707, 3012, 80, 209, "Code",ExpressionUUID->"80f476f1-442b-4252-8e46-bedd1c3293c1"],
+Cell[72968, 1789, 200961, 3724, 627, "Output",ExpressionUUID->"ed414ecc-e910-43ad-b23b-ae4b4c68b9a2"]
 }, Open  ]],
-Cell[252008, 4947, 1243, 30, 236, "Input",ExpressionUUID->"63f50724-7eb5-40cf-954c-f3694a9dc81c"]
+Cell[273944, 5516, 1243, 30, 143, "Input",ExpressionUUID->"63f50724-7eb5-40cf-954c-f3694a9dc81c"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
