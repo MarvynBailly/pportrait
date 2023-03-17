@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    278381,       5617]
-NotebookOptionsPosition[    275227,       5551]
-NotebookOutlinePosition[    275770,       5570]
-CellTagsIndexPosition[    275727,       5567]
+NotebookDataLength[    283897,       5748]
+NotebookOptionsPosition[    280739,       5682]
+NotebookOutlinePosition[    281288,       5701]
+CellTagsIndexPosition[    281245,       5698]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -477,16 +477,16 @@ Cell[BoxData[
          "\[IndentingNewLine]", 
          RowBox[{"Row", "[", 
           RowBox[{"{", 
-           RowBox[{"\"\<The Eigenvalues are \>\"", "<>", 
-            RowBox[{"ToString", "[", 
+           RowBox[{"\"\<The Eigenvalues are \>\"", ",", " ", 
+            RowBox[{"MatrixForm", "[", 
              RowBox[{
               RowBox[{
                RowBox[{"#", "[", 
                 RowBox[{"[", "3", "]"}], "]"}], "[", 
                RowBox[{"[", "1", "]"}], "]"}], "[", 
-              RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\< and \>\"", "<>",
-             " ", 
-            RowBox[{"ToString", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", "\"\< and \>\"", 
+            ",", 
+            RowBox[{"MatrixForm", "[", 
              RowBox[{
               RowBox[{
                RowBox[{"#", "[", 
@@ -516,15 +516,15 @@ Cell[BoxData[
         "}"}], "]"}], "&"}], "/@", "systems"}], "\[IndentingNewLine]", "]"}], 
    "\[IndentingNewLine]"}]}]], "Input",
  CellChangeTimes->{{3.882727340637698*^9, 3.8827276326214123`*^9}, {
-  3.88272772164955*^9, 3.882727832200261*^9}, {3.882728078820619*^9, 
-  3.8827281481851463`*^9}, {3.882728217420113*^9, 3.882728221076376*^9}, {
-  3.882728302922468*^9, 3.882728347366955*^9}, {3.8827283910458527`*^9, 
-  3.882728446738057*^9}, {3.882728565184486*^9, 3.882728597791358*^9}, {
-  3.8827287127588816`*^9, 3.8827289426438723`*^9}, {3.8827291575815015`*^9, 
-  3.882729161940028*^9}, {3.8827292364584417`*^9, 3.882729376873339*^9}, {
-  3.882729408983794*^9, 3.882729569611853*^9}},
- CellLabel->
-  "In[639]:=",ExpressionUUID->"22c45420-5c3b-4f20-8a67-a50e16d6c2d0"],
+   3.88272772164955*^9, 3.882727832200261*^9}, {3.882728078820619*^9, 
+   3.8827281481851463`*^9}, {3.882728217420113*^9, 3.882728221076376*^9}, {
+   3.882728302922468*^9, 3.882728347366955*^9}, {3.8827283910458527`*^9, 
+   3.882728446738057*^9}, {3.882728565184486*^9, 3.882728597791358*^9}, {
+   3.8827287127588816`*^9, 3.8827289426438723`*^9}, {3.8827291575815015`*^9, 
+   3.882729161940028*^9}, {3.8827292364584417`*^9, 3.882729376873339*^9}, {
+   3.882729408983794*^9, 3.882729569611853*^9}, 3.8880825705837793`*^9, {
+   3.888082668787137*^9, 3.8880827574910555`*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"22c45420-5c3b-4f20-8a67-a50e16d6c2d0"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -694,9 +694,9 @@ Cell[BoxData[
    3.8827288008279195`*^9}, {3.8827288469239273`*^9, 3.88272891053828*^9}, 
    3.882728943768849*^9, 3.88272916442437*^9, {3.8827292406789284`*^9, 
    3.882729301054695*^9}, 3.882729377638915*^9, {3.882729412209237*^9, 
-   3.882729479879134*^9}, {3.882729518512803*^9, 3.882729570143115*^9}},
- CellLabel->
-  "Out[646]=",ExpressionUUID->"121663a8-cb61-49a0-8542-d9593adb67cb"],
+   3.882729479879134*^9}, {3.882729518512803*^9, 3.882729570143115*^9}, 
+   3.8880825778597383`*^9, 3.888082690127584*^9, 3.888082758069216*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"71e34efd-57a1-4bfe-9a3c-8f4bd28d8d06"],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -719,7 +719,15 @@ Cell[BoxData[
              MatrixForm[BoxForm`e$]]]},
           "RowDefault"]},
         {
-         TemplateBox[{"\"The Eigenvalues are -5 and -2\""},
+         TemplateBox[{"\"The Eigenvalues are \"", 
+           TagBox[
+            RowBox[{"-", "5"}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]], "\" and \"", 
+           TagBox[
+            RowBox[{"-", "2"}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]]},
           "RowDefault"]},
         {
          TemplateBox[{"\"The corresponding Eigenvectors are \"", 
@@ -765,7 +773,14 @@ Cell[BoxData[
              MatrixForm[BoxForm`e$]]]},
           "RowDefault"]},
         {
-         TemplateBox[{"\"The Eigenvalues are -2 and 1\""},
+         TemplateBox[{"\"The Eigenvalues are \"", 
+           TagBox[
+            RowBox[{"-", "2"}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]], "\" and \"", 
+           TagBox["1", 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]]},
           "RowDefault"]},
         {
          TemplateBox[{"\"The corresponding Eigenvectors are \"", 
@@ -812,9 +827,27 @@ Cell[BoxData[
              MatrixForm[BoxForm`e$]]]},
           "RowDefault"]},
         {
-         TemplateBox[{
-          "\"The Eigenvalues are -1 + I Sqrt[11]\\n---------------\\n       2 \
-and -1 - I Sqrt[11]\\n---------------\\n       2\""},
+         TemplateBox[{"\"The Eigenvalues are \"", 
+           TagBox[
+            RowBox[{
+              FractionBox["1", "2"], " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{"-", "1"}], "+", 
+                  RowBox[{"\[ImaginaryI]", " ", 
+                    SqrtBox["11"]}]}], ")"}]}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]], "\" and \"", 
+           TagBox[
+            RowBox[{
+              FractionBox["1", "2"], " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{"-", "1"}], "-", 
+                  RowBox[{"\[ImaginaryI]", " ", 
+                    SqrtBox["11"]}]}], ")"}]}], 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]]},
           "RowDefault"]},
         {
          TemplateBox[{"\"The corresponding Eigenvectors are \"", 
@@ -872,7 +905,13 @@ and -1 - I Sqrt[11]\\n---------------\\n       2\""},
              MatrixForm[BoxForm`e$]]]},
           "RowDefault"]},
         {
-         TemplateBox[{"\"The Eigenvalues are 5 and 3\""},
+         TemplateBox[{"\"The Eigenvalues are \"", 
+           TagBox["5", 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]], "\" and \"", 
+           TagBox["3", 
+            Function[BoxForm`e$, 
+             MatrixForm[BoxForm`e$]]]},
           "RowDefault"]},
         {
          TemplateBox[{"\"The corresponding Eigenvectors are \"", 
@@ -911,9 +950,9 @@ and -1 - I Sqrt[11]\\n---------------\\n       2\""},
    3.8827288008279195`*^9}, {3.8827288469239273`*^9, 3.88272891053828*^9}, 
    3.882728943768849*^9, 3.88272916442437*^9, {3.8827292406789284`*^9, 
    3.882729301054695*^9}, 3.882729377638915*^9, {3.882729412209237*^9, 
-   3.882729479879134*^9}, {3.882729518512803*^9, 3.882729570158723*^9}},
- CellLabel->
-  "Out[647]=",ExpressionUUID->"a54cf546-e96b-4833-90d4-79290de47d89"]
+   3.882729479879134*^9}, {3.882729518512803*^9, 3.882729570143115*^9}, 
+   3.8880825778597383`*^9, 3.888082690127584*^9, 3.8880827581005297`*^9},
+ CellLabel->"Out[27]=",ExpressionUUID->"a103f417-408c-4380-9455-035a520f2802"]
 }, Open  ]]
 }, Open  ]],
 
@@ -1239,11 +1278,77 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[Element]\"}], TraditionalForm], \
            RowBox[{"Local", " ", "Behavior"}], "*)"}], "\n", "        ", 
           RowBox[{"Style", "[", 
            RowBox[{"\"\<Local Behavior\>\"", ",", "18", ",", "Bold"}], "]"}], 
-          ",", "\[IndentingNewLine]", "        ", "\"\<Systems: \>\"", ",", 
-          "\[IndentingNewLine]", "\t\t", 
-          RowBox[{"Column", "[", "systems", "]"}]}], "\[IndentingNewLine]", 
-         "\t\t  ", "}"}], "]"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
-    "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", 
+          ",", "\[IndentingNewLine]", "\t\t", 
+          RowBox[{"Column", "[", "\n", "\t\t", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Column", "[", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                  RowBox[{"\"\<At the fixed points (\>\"", "<>", 
+                   RowBox[{"ToString", "[", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<,\>\"", 
+                   "<>", 
+                   RowBox[{"ToString", "[", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", 
+                   "\"\<)\>\""}], ",", "Bold"}], "]"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"Row", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<The Jacobian is\>\"", ",", 
+                   RowBox[{"#", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "]"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"Row", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<The Eigenvalues are \>\"", ",", " ", 
+                   RowBox[{"MatrixForm", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
+                   "\"\< and \>\"", ",", 
+                   RowBox[{"MatrixForm", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "}"}], "]"}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"Row", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<The corresponding Eigenvectors are \>\"", ",", 
+                   RowBox[{"MatrixForm", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}], "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", " ", 
+                   "\"\< and \>\"", ",", 
+                   RowBox[{"MatrixForm", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}], "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "}"}], "]"}]}], 
+               "\[IndentingNewLine]", "\[IndentingNewLine]", 
+               "\[IndentingNewLine]", "}"}], "]"}], "&"}], "/@", "systems"}], 
+           "\n", "\t\t", "]"}]}], "\[IndentingNewLine]", "\t\t  ", "}"}], 
+        "]"}]}]}], "]"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", "\t", 
     RowBox[{"(*", 
      RowBox[{"Input", " ", "Fields"}], "*)"}], "\n", "\t", 
     RowBox[{"Style", "[", 
@@ -1411,15 +1516,15 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[LongEqual]\"}], TraditionalForm], \
    3.8824000557532573`*^9, 3.8824001229191732`*^9}, {3.882401145270554*^9, 
    3.8824011469498043`*^9}, {3.882401206530188*^9, 3.882401249658884*^9}, {
    3.8824013631572313`*^9, 3.882401397616417*^9}, {3.8824014999318247`*^9, 
-   3.882401503021006*^9}},
- CellLabel->"In[12]:=",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
+   3.882401503021006*^9}, {3.888082812006465*^9, 3.888082893063879*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`f$$ = (
      1 - $CellContext`x - $CellContext`y) (-$CellContext`x + $CellContext`y), \
-$CellContext`g$$ = $CellContext`x (
+$CellContext`g$$ = $CellContext`x^2 (
      2 + $CellContext`y), $CellContext`showPhasePotrait$$ = 
     True, $CellContext`showSystem$$ = True, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
@@ -1470,7 +1575,7 @@ $CellContext`y),
           Manipulate`Place[2]}, {
           Manipulate`Place[3], 
           Manipulate`Place[4]}}]], Manipulate`Dump`ThisIsNotAControl}}, 
-    Typeset`size$$ = {380., {409.4340332031251, 415.1659667968751}}, 
+    Typeset`size$$ = {457., {497.33403320312505`, 503.06596679687505`}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      2, StandardForm, 
@@ -1584,13 +1689,40 @@ y) =\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)",
 RowBox[{StyleBox[\"x\", \"TI\"], \",\", StyleBox[\"y\", \"TI\"]}], \")\"}], \
 \"\[Element]\"}], TraditionalForm], \"errors\" -> {}, \"input\" -> \
 \"(x,y)\\\\in\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\) ", 
-             Map[((("(" <> ToString[
+             Map["(" <> ToString[
+                Part[
+                 Part[#, 1], 2]] <> "," <> ToString[
+                Part[
+                 Part[#, 2], 2]] <> ")"& , $CellContext`fpList$]}], 
+           Style["Local Behavior", 18, Bold], 
+           Column[
+            Map[Column[{
+               Style["At the fixed points (" <> ToString[
+                  Part[
+                   Part[#, 1], 1]] <> "," <> ToString[
+                  Part[
+                   Part[#, 1], 2]] <> ")", Bold], 
+               Row[{"The Jacobian is", 
+                 Part[#, 2]}], 
+               Row[{"The Eigenvalues are ", 
+                 MatrixForm[
+                  Part[
                    Part[
-                    Part[#, 1], 2]]) <> ",") <> ToString[
-                 Part[
-                  Part[#, 2], 2]]) <> ")"& , $CellContext`fpList$]}], 
-           Style["Local Behavior", 18, Bold], "Systems: ", 
-           Column[$CellContext`systems$]}]], "Specifications" :> {
+                    Part[#, 3], 1], 1]], " and ", 
+                 MatrixForm[
+                  Part[
+                   Part[
+                    Part[#, 3], 1], 2]]}], 
+               Row[{"The corresponding Eigenvectors are ", 
+                 MatrixForm[
+                  Part[
+                   Part[
+                    Part[#, 3], 2], 1]], " and ", 
+                 MatrixForm[
+                  Part[
+                   Part[
+                    Part[#, 3], 2], 2]]}]}]& , $CellContext`systems$]]}]], 
+      "Specifications" :> {
         Style["Dynamical System", Large, Bold], 
         Style[
         "Enter a system of differential equations of the form \
@@ -1635,7 +1767,7 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[LongEqual]\"}], TraditionalForm], \
            Manipulate`Place[2]}, {
            Manipulate`Place[3], 
            Manipulate`Place[4]}}]}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{428., {507.134033203125, 512.865966796875}},
+     ImageSizeCache->{505., {584.134033203125, 589.865966796875}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1658,8 +1790,9 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[LongEqual]\"}], TraditionalForm], \
    3.882399538972061*^9, 3.882399721807601*^9, 3.882400017395424*^9, {
    3.882400086413768*^9, 3.8824001234761333`*^9}, 3.8824009422010884`*^9, {
    3.882401159058733*^9, 3.8824011631827*^9}, 3.882401217257794*^9, 
-   3.8824012511489477`*^9, 3.8824013707827873`*^9, 3.882401504952173*^9},
- CellLabel->"Out[12]=",ExpressionUUID->"7ba067e0-1890-40aa-98ac-cc2fa73aac4f"]
+   3.8824012511489477`*^9, 3.8824013707827873`*^9, 3.882401504952173*^9, 
+   3.888082863725762*^9, 3.888082895434206*^9},
+ CellLabel->"Out[29]=",ExpressionUUID->"7036e62f-aa61-4ac6-81c0-724eb2efadcd"]
 }, Open  ]]
 }, Open  ]],
 
@@ -1796,7 +1929,7 @@ Cell[BoxData[
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`T$$], 10}, 1, 100}, {{
        Hold[$CellContext`point$$], {1, 0}}, Automatic}}, Typeset`size$$ = {
-    540., {266., 273.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    360., {178., 181.7705078125}}, Typeset`update$$ = 0, Typeset`initDone$$, 
     Typeset`skipInitDone$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
@@ -1830,7 +1963,7 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
       "Specifications" :> {{{$CellContext`T$$, 10}, 1, 
          100}, {{$CellContext`point$$, {1, 0}}, Automatic, ControlType -> 
          Locator}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{815., {301.134033203125, 306.865966796875}},
+     ImageSizeCache->{635., {211.134033203125, 216.865966796875}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1879,7 +2012,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999997`, 1.}}], {
                LABColor[
                0.6173509721991544, 0.5362257959695772, 0.6113566980572849], 
-               
                Arrow[{{-1.8666028479667802`, 
                 2.2470999772968194`}, {-1.8329109608047953`, 
                 2.2529353316441307`}, {-1.7136443082012207`, 
@@ -2235,7 +2367,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.020000000000000004`, 1.}}], {
                LABColor[
                0.4626038886297521, 0.5261422047939596, -0.07804541765638717], 
-               
                Arrow[{{-3.8937342059530105`, 
                 1.1544224264983334`}, {-3.8005956169469934`, 
                 1.0772376731011608`}, {-3.7135251649948544`, 
@@ -3110,7 +3241,6 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.02, 1.}}], {
                LABColor[
                0.6905192857207673, 0.432953898266953, 0.7578081884274631], 
-               
                Arrow[{{-2.279091069217928, 
                 2.7383202168892065`}, {-2.1588330841372807`, 
                 2.7433115409328566`}, {-2.033485386117087, 
@@ -3294,6 +3424,7 @@ $CellContext`y}, {$CellContext`t, 0, $CellContext`T$$}]]]], {$CellContext`t,
               Arrowheads[{{0.019999999999999997`, 1.}}], {
                LABColor[
                0.6668366601615819, 0.48695773886666743`, 0.7445966406747118], 
+               
                Arrow[{{1.4444539894848272`, -2.5491143949286497`}, {
                 1.3789950652910659`, -2.558136984899186}, {
                 1.230841154837456, -2.576602679404288}, {
@@ -5549,8 +5680,8 @@ Cell[BoxData[
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{582, 418},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{960, 508},
+WindowMargins->{{-5.5, Automatic}, {Automatic, -5.5}},
 SpellingDictionaries->{"CorrectWords"->{
  "Representer\[CloseCurlyQuote]s", "Representer", "Osorio", "pportrait"}},
 Magnification:>1. Inherited,
@@ -5574,11 +5705,11 @@ Cell[580, 22, 156, 3, 98, "Title",ExpressionUUID->"331ec153-d022-49ec-8232-a3070
 Cell[739, 27, 339, 7, 79, "Subtitle",ExpressionUUID->"6bfeb5f5-1c54-4901-87ea-59d29ed5cee1"],
 Cell[CellGroupData[{
 Cell[1103, 38, 158, 3, 67, "Section",ExpressionUUID->"b02d3d9c-3e8e-4b6d-b5d5-57c9d32886ef"],
-Cell[1264, 43, 647, 12, 173, "Text",ExpressionUUID->"578e83f7-6a79-4a89-a23f-5ef478ba7f5a"]
+Cell[1264, 43, 647, 12, 150, "Text",ExpressionUUID->"578e83f7-6a79-4a89-a23f-5ef478ba7f5a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1948, 60, 243, 4, 105, "Section",ExpressionUUID->"17083cd6-2c29-4d78-8ddf-cc99f496c74a"],
-Cell[2194, 66, 467, 11, 104, "Text",ExpressionUUID->"aa937040-2283-4bf3-9f03-2b06bf4939ef"],
+Cell[1948, 60, 243, 4, 67, "Section",ExpressionUUID->"17083cd6-2c29-4d78-8ddf-cc99f496c74a"],
+Cell[2194, 66, 467, 11, 58, "Text",ExpressionUUID->"aa937040-2283-4bf3-9f03-2b06bf4939ef"],
 Cell[CellGroupData[{
 Cell[2686, 81, 1193, 30, 68, "Code",ExpressionUUID->"6f679c88-b364-4dd9-b5c5-392c5a5ace69"],
 Cell[3882, 113, 1985, 39, 295, "Output",ExpressionUUID->"95a71f6d-f175-42d5-bab4-faacc7b5d726"]
@@ -5588,34 +5719,34 @@ Cell[5904, 157, 489, 11, 68, "Code",ExpressionUUID->"5d322978-a108-42fd-b067-ce6
 Cell[6396, 170, 4480, 113, 191, "Output",ExpressionUUID->"22664dbb-04bc-499d-8b10-f3e37de67b0b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10913, 288, 8890, 238, 638, "Input",ExpressionUUID->"22c45420-5c3b-4f20-8a67-a50e16d6c2d0"],
-Cell[19806, 528, 5594, 170, 196, "Output",ExpressionUUID->"121663a8-cb61-49a0-8542-d9593adb67cb"],
-Cell[25403, 700, 8298, 215, 547, "Output",ExpressionUUID->"a54cf546-e96b-4833-90d4-79290de47d89"]
+Cell[10913, 288, 8970, 238, 504, "Input",ExpressionUUID->"22c45420-5c3b-4f20-8a67-a50e16d6c2d0"],
+Cell[19886, 528, 5662, 170, 122, "Output",ExpressionUUID->"71e34efd-57a1-4bfe-9a3c-8f4bd28d8d06"],
+Cell[25551, 700, 9666, 254, 454, "Output",ExpressionUUID->"a103f417-408c-4380-9455-035a520f2802"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[33750, 921, 153, 3, 67, "Section",ExpressionUUID->"9efded44-15c8-43d3-a7a5-40280e1f15ed"],
+Cell[35266, 960, 153, 3, 67, "Section",ExpressionUUID->"9efded44-15c8-43d3-a7a5-40280e1f15ed"],
 Cell[CellGroupData[{
-Cell[33928, 928, 177, 3, 54, "Subsection",ExpressionUUID->"4cd0ee05-51a4-4652-896f-1cbf8a108cf7"],
+Cell[35444, 967, 177, 3, 54, "Subsection",ExpressionUUID->"4cd0ee05-51a4-4652-896f-1cbf8a108cf7"],
 Cell[CellGroupData[{
-Cell[34130, 935, 21475, 479, 1160, "Code",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
-Cell[55608, 1416, 12926, 245, 1039, "Output",ExpressionUUID->"7ba067e0-1890-40aa-98ac-cc2fa73aac4f"]
+Cell[35646, 974, 24538, 545, 1300, "Code",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
+Cell[60187, 1521, 13881, 273, 1193, "Output",ExpressionUUID->"7036e62f-aa61-4ac6-81c0-724eb2efadcd"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[68583, 1667, 163, 3, 54, "Subsection",ExpressionUUID->"8db4dca2-4fee-42ba-880a-212cf85fa7df"],
+Cell[74117, 1800, 163, 3, 54, "Subsection",ExpressionUUID->"8db4dca2-4fee-42ba-880a-212cf85fa7df"],
 Cell[CellGroupData[{
-Cell[68771, 1674, 338, 6, 50, "Code",ExpressionUUID->"f31a03e1-f17a-47fe-a50f-518c2e78329c"],
-Cell[69112, 1682, 611, 12, 85, "Output",ExpressionUUID->"20f5fe6f-c1da-4294-9fef-ec1ab0fea3a0"]
+Cell[74305, 1807, 338, 6, 50, "Code",ExpressionUUID->"f31a03e1-f17a-47fe-a50f-518c2e78329c"],
+Cell[74646, 1815, 611, 12, 35, "Output",ExpressionUUID->"20f5fe6f-c1da-4294-9fef-ec1ab0fea3a0"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[69772, 1700, 156, 3, 54, "Subsection",ExpressionUUID->"9d3f931d-6834-49bd-adb3-735ddd428686"],
+Cell[75306, 1833, 156, 3, 54, "Subsection",ExpressionUUID->"9d3f931d-6834-49bd-adb3-735ddd428686"],
 Cell[CellGroupData[{
-Cell[69953, 1707, 3012, 80, 209, "Code",ExpressionUUID->"80f476f1-442b-4252-8e46-bedd1c3293c1"],
-Cell[72968, 1789, 200961, 3724, 627, "Output",ExpressionUUID->"ed414ecc-e910-43ad-b23b-ae4b4c68b9a2"]
+Cell[75487, 1840, 3012, 80, 209, "Code",ExpressionUUID->"80f476f1-442b-4252-8e46-bedd1c3293c1"],
+Cell[78502, 1922, 200939, 3722, 447, "Output",ExpressionUUID->"ed414ecc-e910-43ad-b23b-ae4b4c68b9a2"]
 }, Open  ]],
-Cell[273944, 5516, 1243, 30, 143, "Input",ExpressionUUID->"63f50724-7eb5-40cf-954c-f3694a9dc81c"]
+Cell[279456, 5647, 1243, 30, 143, "Input",ExpressionUUID->"63f50724-7eb5-40cf-954c-f3694a9dc81c"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
