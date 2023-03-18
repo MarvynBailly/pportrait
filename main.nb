@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    280752,       5587]
-NotebookOptionsPosition[    277701,       5522]
-NotebookOutlinePosition[    278244,       5541]
-CellTagsIndexPosition[    278201,       5538]
+NotebookDataLength[    286219,       5701]
+NotebookOptionsPosition[    283168,       5636]
+NotebookOutlinePosition[    283711,       5655]
+CellTagsIndexPosition[    283668,       5652]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -559,63 +559,132 @@ Cell[BoxData[
           RowBox[{"Phase", " ", "Potrait"}], "*)"}], "\n", "\t\t", 
          RowBox[{
           RowBox[{"If", "[", 
-           RowBox[{"showPhasePotrait", ",", "\n", "\t\t", 
-            RowBox[{"Column", "[", 
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"Style", "[", 
-                RowBox[{"\"\<Phase Potrait\>\"", ",", "18", ",", "Bold"}], 
-                "]"}], ",", "\[IndentingNewLine]", "\t", 
-               RowBox[{"StreamPlot", "[", 
+           RowBox[{"showPhasePotrait", ",", "\n", "\t\t\t", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"!", 
+               RowBox[{
+                RowBox[{"Length", "[", "conditionals", "]"}], " ", "==", " ", 
+                "0"}]}], ",", "\n", "\t\t\t", 
+              RowBox[{"Column", "[", 
+               RowBox[{"{", 
                 RowBox[{
-                 RowBox[{"F", "[", 
-                  RowBox[{"x", ",", "y"}], "]"}], ",", 
-                 RowBox[{"{", 
-                  RowBox[{"x", ",", "xMin", ",", "xMax"}], "}"}], ",", 
-                 RowBox[{"{", 
-                  RowBox[{"y", ",", "yMin", ",", "yMax"}], "}"}], ",", 
-                 RowBox[{"StreamColorFunction", "->", "\"\<Rainbow\>\""}], 
-                 ",", 
-                 RowBox[{"Axes", " ", "->", " ", "True"}], ",", " ", 
-                 RowBox[{"AxesLabel", "\[Rule]", 
-                  RowBox[{"{", 
-                   RowBox[{"\"\<x\>\"", ",", "\"\<y\>\""}], "}"}]}], ",", 
-                 RowBox[{"AxesStyle", "\[Rule]", "Gray"}], ",", 
-                 RowBox[{"Frame", "->", "False"}], ",", " ", 
-                 RowBox[{"StreamPoints", "->", "Fine"}], ",", " ", 
-                 RowBox[{"ImageSize", " ", "->", " ", 
-                  RowBox[{"72", " ", "5"}]}]}], "]"}]}], "}"}], "]"}]}], "\n",
-            "\t\t", "]"}], ",", "\[IndentingNewLine]", "\t\t", "\n", "\t\t", 
-          "\n", "\t\t", 
-          RowBox[{"(*", "System", "*)"}], "\n", "\t\t", 
-          RowBox[{"If", "[", 
-           RowBox[{"showSystem", ",", "\n", "\t\t", 
-            RowBox[{"(*", "true", "*)"}], "\n", "\t\t", 
-            RowBox[{"Column", "[", 
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"Style", "[", 
-                RowBox[{"\"\<System\>\"", ",", "18", ",", "Bold"}], "]"}], 
-               ",", "\n", "\t\t", 
-               RowBox[{"Row", "[", 
-                RowBox[{"{", 
-                 RowBox[{"\"\<The Entered System: \>\"", ",", " ", 
-                  RowBox[{"MatrixForm", "[", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{"\"\<Phase Potrait\>\"", ",", "18", ",", "Bold"}], 
+                  "]"}], ",", "\[IndentingNewLine]", "\t\t\t", 
+                 RowBox[{"StreamPlot", "[", 
+                  RowBox[{
+                   RowBox[{"F", "[", 
+                    RowBox[{"x", ",", "y"}], "]"}], ",", 
                    RowBox[{"{", 
-                    RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+                    RowBox[{"x", ",", "xMin", ",", "xMax"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"y", ",", "yMin", ",", "yMax"}], "}"}], ",", 
+                   RowBox[{"StreamColorFunction", "->", "\"\<Rainbow\>\""}], 
+                   ",", 
+                   RowBox[{"Axes", " ", "->", " ", "True"}], ",", " ", 
+                   RowBox[{"AxesLabel", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<x\>\"", ",", "\"\<y\>\""}], "}"}]}], ",", 
+                   RowBox[{"AxesStyle", "\[Rule]", "Gray"}], ",", 
+                   RowBox[{"Frame", "->", "False"}], ",", " ", 
+                   RowBox[{"StreamPoints", "->", "Fine"}], ",", " ", 
+                   RowBox[{"ImageSize", " ", "->", " ", 
+                    RowBox[{"72", " ", "5"}]}]}], "]"}]}], "}"}], "]"}], ",", 
+              "\n", "\t\t\t", 
+              RowBox[{"Column", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{"\"\<Phase Potrait\>\"", ",", "18", ",", "Bold"}], 
+                  "]"}], ",", "\[IndentingNewLine]", "\t\t\t", 
+                 RowBox[{"StreamPlot", "[", 
+                  RowBox[{
+                   RowBox[{"F", "[", 
+                    RowBox[{"x", ",", "y"}], "]"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"x", ",", "xMin", ",", "xMax"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"y", ",", "yMin", ",", "yMax"}], "}"}], ",", 
+                   RowBox[{"Epilog", " ", "->", " ", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"RGBColor", "[", 
+                    RowBox[{"255", ",", "0", ",", "0", ",", "0.5"}], "]"}], 
+                    ",", " ", 
+                    RowBox[{"PointSize", "[", "0.02", "]"}], ",", " ", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Tooltip", "[", 
+                    RowBox[{
+                    RowBox[{"Point", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], ",", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "]"}], ",", 
+                    RowBox[{"\"\<Fixed Point at (\>\"", "<>", 
+                    RowBox[{"ToString", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], ",", 
+                    RowBox[{"FormatType", " ", "->", " ", "StandardForm"}]}], 
+                    "]"}], "<>", "\"\<,\>\"", "<>", 
+                    RowBox[{"ToString", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], ",", 
+                    RowBox[{"FormatType", " ", "->", " ", "StandardForm"}]}], 
+                    "]"}], "<>", "\"\<)\>\""}]}], "]"}], "&"}], "/@", 
+                    "fpList"}]}], "}"}]}], ",", 
+                   RowBox[{"StreamColorFunction", "->", "\"\<Rainbow\>\""}], 
+                   ",", 
+                   RowBox[{"Axes", " ", "->", " ", "True"}], ",", " ", 
+                   RowBox[{"AxesLabel", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<x\>\"", ",", "\"\<y\>\""}], "}"}]}], ",", 
+                   RowBox[{"AxesStyle", "\[Rule]", "Gray"}], ",", 
+                   RowBox[{"Frame", "->", "False"}], ",", " ", 
+                   RowBox[{"StreamPoints", "->", "Fine"}], ",", " ", 
+                   RowBox[{"ImageSize", " ", "->", " ", 
+                    RowBox[{"72", " ", "5"}]}]}], "]"}]}], "}"}], "]"}]}], 
+             "\n", "\t\t\t", "]"}]}], "\n", "\t\t", "]"}], ",", "\n", "\t\t", 
+          "\n", "\t\t", "\n", "\t\t", 
+          RowBox[{"(*", "System", "*)"}], "\[IndentingNewLine]", "\t\t", 
+          RowBox[{"Column", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<System\>\"", ",", "18", ",", "Bold"}], "]"}], ",", 
+             "\n", "\t\t", 
+             RowBox[{"Row", "[", 
+              RowBox[{"{", 
+               RowBox[{"\"\<The Entered System: \>\"", ",", " ", 
+                RowBox[{"MatrixForm", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
 SuperscriptBox[
 StyleBox[\"x\", \"TI\"], \"\[Prime]\"], TraditionalForm], \"errors\" -> {}, \
 \"input\" -> \"x'\", \"state\" -> \
 \"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\"", ",", 
-                    "\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+                   "\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
 SuperscriptBox[
 StyleBox[\"y\", \"TI\"], \"\[Prime]\"], TraditionalForm], \"errors\" -> {}, \
 \"input\" -> \"y'\", \"state\" -> \
 \"Boxes\"|>,\"TeXAssistantTemplate\"]\)\>\""}], "}"}], "]"}], ",", 
-                  "\"\<=\>\"", ",", 
-                  RowBox[{"MatrixForm", "[", 
-                   RowBox[{"{", 
-                    RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
+                "\"\<=\>\"", ",", 
+                RowBox[{"MatrixForm", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
 RowBox[{
 StyleBox[\"f\", \"TI\"], \"(\", 
 RowBox[{
@@ -630,11 +699,10 @@ StyleBox[\"x\", \"TI\"], \",\",
 StyleBox[\"y\", \"TI\"]}], \")\"}], TraditionalForm], \"errors\" -> {}, \
 \"input\" -> \"g(x,y)\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)\
 \>\""}], "}"}], "]"}], ",", "\"\<=\>\"", ",", 
-                  RowBox[{"MatrixForm", "[", 
-                   RowBox[{"F", "[", 
-                    RowBox[{"x", ",", "y"}], "]"}], "]"}]}], "}"}], "]"}]}], 
-              "}"}], "]"}]}], "]"}], ",", "\n", "\t\t", "\n", "\t\t", "\n", 
-          "\t\t", 
+                RowBox[{"MatrixForm", "[", 
+                 RowBox[{"F", "[", 
+                  RowBox[{"x", ",", "y"}], "]"}], "]"}]}], "}"}], "]"}]}], 
+            "}"}], "]"}], ",", "\n", "\t\t", "\n", "\t\t", "\n", "\t\t", 
           RowBox[{"(*", "Jacobian", "*)"}], "\n", "\t\t", 
           RowBox[{"Style", "[", 
            RowBox[{"\"\<Jacobian\>\"", ",", "18", ",", "Bold"}], "]"}], ",", 
@@ -742,19 +810,24 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[Element]\"}], TraditionalForm], \
           "\n", "        ", "\n", "        ", 
           RowBox[{"(*", 
            RowBox[{"Local", " ", "Behavior"}], "*)"}], "\n", "        ", 
-          RowBox[{"Style", "[", 
-           RowBox[{"\"\<Local Behavior\>\"", ",", "18", ",", "Bold"}], "]"}], 
-          ",", "\[IndentingNewLine]", "\t\t", 
-          RowBox[{"Column", "[", "\n", "\t\t\t", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Column", "[", 
-              RowBox[{"{", "\[IndentingNewLine]", "\t\t\t\t", 
-               RowBox[{
-                RowBox[{"Style", "[", 
+          RowBox[{"If", "[", 
+           RowBox[{"showLocalBehavior", ",", "\n", "        ", 
+            RowBox[{"Column", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<Local Behavior\>\"", ",", "18", ",", "Bold"}], 
+                "]"}], ",", "\[IndentingNewLine]", "\t\t", 
+               RowBox[{"Column", "[", "\n", "\t\t\t", 
+                RowBox[{
                  RowBox[{
-                  RowBox[{"\"\<At the fixed points (\>\"", "<>", 
-                   RowBox[{"ToString", "[", 
+                  RowBox[{"Column", "[", 
+                   RowBox[{"{", "\[IndentingNewLine]", "\t\t\t\t", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"\"\<At the fixed points (\>\"", "<>", 
+                    RowBox[{"ToString", "[", 
                     RowBox[{
                     RowBox[{
                     RowBox[{"#", "[", 
@@ -762,7 +835,7 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[Element]\"}], TraditionalForm], \
                     RowBox[{"[", "1", "]"}], "]"}], ",", 
                     RowBox[{"FormatType", " ", "->", " ", "StandardForm"}]}], 
                     "]"}], "<>", "\"\<,\>\"", "<>", 
-                   RowBox[{"ToString", "[", 
+                    RowBox[{"ToString", "[", 
                     RowBox[{
                     RowBox[{
                     RowBox[{"#", "[", 
@@ -770,54 +843,57 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[Element]\"}], TraditionalForm], \
                     RowBox[{"[", "2", "]"}], "]"}], ",", 
                     RowBox[{"FormatType", " ", "->", " ", "StandardForm"}]}], 
                     "]"}], "<>", "\"\<)\>\""}], ",", "Bold"}], "]"}], ",", 
-                "\[IndentingNewLine]", "\t\t\t\t", 
-                RowBox[{"Row", "[", 
-                 RowBox[{"{", 
-                  RowBox[{"\"\<The Jacobian is\>\"", ",", 
-                   RowBox[{"#", "[", 
+                    "\[IndentingNewLine]", "\t\t\t\t", 
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<The Jacobian is\>\"", ",", 
+                    RowBox[{"#", "[", 
                     RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "]"}], ",", 
-                "\[IndentingNewLine]", "\t\t\t\t", 
-                RowBox[{"Row", "[", 
-                 RowBox[{"{", 
-                  RowBox[{"\"\<The Eigenvalues are \>\"", ",", " ", 
-                   RowBox[{"MatrixForm", "[", 
+                    "\[IndentingNewLine]", "\t\t\t\t", 
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<The Eigenvalues are \>\"", ",", " ", 
+                    RowBox[{"MatrixForm", "[", 
                     RowBox[{
                     RowBox[{
                     RowBox[{"#", "[", 
                     RowBox[{"[", "3", "]"}], "]"}], "[", 
                     RowBox[{"[", "1", "]"}], "]"}], "[", 
                     RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
-                   "\"\< and \>\"", ",", 
-                   RowBox[{"MatrixForm", "[", 
+                    "\"\< and \>\"", ",", 
+                    RowBox[{"MatrixForm", "[", 
                     RowBox[{
                     RowBox[{
                     RowBox[{"#", "[", 
                     RowBox[{"[", "3", "]"}], "]"}], "[", 
                     RowBox[{"[", "1", "]"}], "]"}], "[", 
                     RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "}"}], "]"}], 
-                ",", "\[IndentingNewLine]", "\t\t\t\t", 
-                RowBox[{"Row", "[", 
-                 RowBox[{"{", 
-                  RowBox[{"\"\<The corresponding Eigenvectors are \>\"", ",", 
-                   RowBox[{"MatrixForm", "[", 
+                    ",", "\[IndentingNewLine]", "\t\t\t\t", 
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "\"\<The corresponding Eigenvectors are \>\"", ",", 
+                    RowBox[{"MatrixForm", "[", 
                     RowBox[{
                     RowBox[{
                     RowBox[{"#", "[", 
                     RowBox[{"[", "3", "]"}], "]"}], "[", 
                     RowBox[{"[", "2", "]"}], "]"}], "[", 
                     RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", " ", 
-                   "\"\< and \>\"", ",", 
-                   RowBox[{"MatrixForm", "[", 
+                    "\"\< and \>\"", ",", 
+                    RowBox[{"MatrixForm", "[", 
                     RowBox[{
                     RowBox[{
                     RowBox[{"#", "[", 
                     RowBox[{"[", "3", "]"}], "]"}], "[", 
                     RowBox[{"[", "2", "]"}], "]"}], "[", 
                     RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "}"}], "]"}]}], 
-               "\[IndentingNewLine]", "\t\t\t", "}"}], "]"}], "&"}], "/@", 
-            "systems"}], "\n", "\t\t\t", "]"}]}], "\[IndentingNewLine]", 
-         "\t\t  ", "}"}], "]"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
-    "\[IndentingNewLine]", "\[IndentingNewLine]", "\t", 
+                    "\[IndentingNewLine]", "\t\t\t", "}"}], "]"}], "&"}], "/@",
+                  "systems"}], "\n", "\t\t\t", "]"}]}], "}"}], "]"}]}], 
+           "]"}]}], "\n", "\t\t\t", "\n", "\t\t\t", "\n", "\t\t\t", "\n", 
+         "\t\t\t", "\n", "\t\t\t", "}"}], "]"}]}]}], "\[IndentingNewLine]", 
+     "\t\t  ", "]"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", "\n",
+     "\t", 
     RowBox[{"(*", 
      RowBox[{"Input", " ", "Fields"}], "*)"}], "\n", "\t", 
     RowBox[{"Style", "[", 
@@ -868,7 +944,13 @@ StyleBox[\"y\", \"TI\"]}], \")\"}]}], TraditionalForm], \"errors\" -> {}, \
           RowBox[{"{", 
            RowBox[{
             RowBox[{"{", 
-             RowBox[{"f", ",", "y", ",", 
+             RowBox[{"f", ",", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "-", "x", "-", "y"}], ")"}], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"-", "x"}], "+", "y"}], ")"}]}], ",", 
               RowBox[{"Style", "[", 
                RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
 RowBox[{
@@ -894,10 +976,10 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[LongEqual]\"}], TraditionalForm], \
           RowBox[{"{", 
            RowBox[{
             RowBox[{"{", 
-             RowBox[{"g", ",", 
-              RowBox[{
-               RowBox[{"-", "5"}], "*", 
-               RowBox[{"Sin", "[", "x", "]"}]}], ",", 
+             RowBox[{"g", ",", " ", 
+              RowBox[{"x", " ", 
+               RowBox[{"(", 
+                RowBox[{"2", "+", "y"}], ")"}]}], ",", 
               RowBox[{"Style", "[", 
                RowBox[{"\"\<\!\(\*TemplateBox[<|\"boxes\" -> FormBox[
 RowBox[{
@@ -913,7 +995,7 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[LongEqual]\"}], TraditionalForm], \
          "\t\t\t\t", 
          RowBox[{"Control", "@", 
           RowBox[{"{", 
-           RowBox[{"showSystem", ",", 
+           RowBox[{"showLocalBehavior", ",", 
             RowBox[{"{", 
              RowBox[{"True", ",", "False"}], "}"}]}], "}"}]}]}], "\n", 
         "\t\t\t", "}"}]}], "\n", "\t\t\t", "\n", "\t\t", "}"}], "\n", "\t", 
@@ -1053,17 +1135,33 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[LongEqual]\"}], TraditionalForm], \
    3.8880915045717297`*^9}, {3.8880916995511227`*^9, 
    3.8880917118182306`*^9}, {3.8880920728520403`*^9, 3.8880920744926805`*^9}, 
    3.888093988743791*^9, {3.888094690091172*^9, 3.8880948030568213`*^9}, {
-   3.888094876005248*^9, 3.8880948774739933`*^9}},
+   3.888094876005248*^9, 3.8880948774739933`*^9}, {3.888096313411039*^9, 
+   3.888096356279847*^9}, {3.8880967012250977`*^9, 3.888096724925835*^9}, {
+   3.8880970725923953`*^9, 3.8880970949613423`*^9}, {3.8880972392465816`*^9, 
+   3.8880972803085213`*^9}, {3.88809731360556*^9, 3.888097532506567*^9}, 
+   3.888097568703986*^9, {3.8880976018045306`*^9, 3.8880976020077085`*^9}, {
+   3.888097658898059*^9, 3.8880976788910313`*^9}, {3.8880977110460997`*^9, 
+   3.888097730593725*^9}, {3.888097815025483*^9, 3.8880978221633825`*^9}, {
+   3.8880978778896885`*^9, 3.888097967614711*^9}, {3.8880979991702557`*^9, 
+   3.888098004000766*^9}, {3.8880980583866277`*^9, 3.8880980819932685`*^9}, {
+   3.888098128052684*^9, 3.888098177122438*^9}, {3.8880982077943287`*^9, 
+   3.888098419408615*^9}, {3.888098456013386*^9, 3.888098488526029*^9}, {
+   3.888098521325778*^9, 3.888098529656081*^9}, 3.8880985818207965`*^9, {
+   3.888098646145587*^9, 3.88809875415799*^9}, {3.888098813042638*^9, 
+   3.8880988764496255`*^9}, {3.888098967198109*^9, 3.888099065213829*^9}, {
+   3.888099233913186*^9, 3.888099277400951*^9}, {3.8880993320792565`*^9, 
+   3.8880993582705307`*^9}},
  CellLabel->
-  "In[726]:=",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
+  "In[763]:=",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`f$$ = 
-    Sin[$CellContext`y], $CellContext`g$$ = 
-    Cos[$CellContext`x], $CellContext`showPhasePotrait$$ = 
-    True, $CellContext`showSystem$$ = True, $CellContext`xMax$$ = 
+   DynamicModuleBox[{$CellContext`f$$ = (
+     1 - $CellContext`x - $CellContext`y) (-$CellContext`x + $CellContext`y), \
+$CellContext`g$$ = $CellContext`x (
+     2 + $CellContext`y), $CellContext`showLocalBehavior$$ = 
+    True, $CellContext`showPhasePotrait$$ = True, $CellContext`xMax$$ = 
     5, $CellContext`xMin$$ = -5, $CellContext`yMax$$ = 
     5, $CellContext`yMin$$ = -5, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
@@ -1090,7 +1188,9 @@ RowBox[{StyleBox[\"x\", \"TI\"], \",\", StyleBox[\"y\", \"TI\"]}], \")\"}]}], \
 TraditionalForm], \"errors\" -> {}, \"input\" -> \"\\\\frac{dy}{dt} = \
 g(x,y)\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 12]], 
       Manipulate`Dump`ThisIsNotAControl}, {{
-       Hold[$CellContext`f$$], $CellContext`y, 
+       Hold[$CellContext`f$$], (
+        1 - $CellContext`x - $CellContext`y) (-$CellContext`x + \
+$CellContext`y), 
        Style[
        "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{StyleBox[\"f\", \"TI\
 \"], RowBox[{\"(\", RowBox[{StyleBox[\"x\", \"TI\"], \",\", StyleBox[\"y\", \
@@ -1098,14 +1198,14 @@ g(x,y)\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 12]],
 \"input\" -> \"f(x,y)=\", \"state\" -> \
 \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 12]}}, {
       Hold[$CellContext`showPhasePotrait$$], {True, False}}, {{
-       Hold[$CellContext`g$$], (-5) Sin[$CellContext`x], 
+       Hold[$CellContext`g$$], $CellContext`x (2 + $CellContext`y), 
        Style[
        "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{StyleBox[\"g\", \"TI\
 \"], RowBox[{\"(\", RowBox[{StyleBox[\"x\", \"TI\"], \",\", StyleBox[\"y\", \
 \"TI\"]}], \")\"}], \"\[LongEqual]\"}], TraditionalForm], \"errors\" -> {}, \
 \"input\" -> \"g(x,y)=\", \"state\" -> \
 \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 12]}}, {
-      Hold[$CellContext`showSystem$$], {True, False}}, {
+      Hold[$CellContext`showLocalBehavior$$], {True, False}}, {
       Hold[
        Grid[{{
           Manipulate`Place[1], 
@@ -1128,13 +1228,15 @@ g(x,y)\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 12]],
           Manipulate`Place[6]}, {
           Manipulate`Place[7], 
           Manipulate`Place[8]}}]], Manipulate`Dump`ThisIsNotAControl}}, 
-    Typeset`size$$ = {548., {616.334033203125, 622.065966796875}}, 
+    Typeset`size$$ = {524., {504.234033203125, 509.965966796875}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      2, StandardForm, 
-      "Variables" :> {$CellContext`f$$ = $CellContext`y, $CellContext`g$$ = \
-(-5) Sin[$CellContext`x], $CellContext`showPhasePotrait$$ = 
-        True, $CellContext`showSystem$$ = True, $CellContext`xMax$$ = 
+      "Variables" :> {$CellContext`f$$ = (
+          1 - $CellContext`x - $CellContext`y) (-$CellContext`x + \
+$CellContext`y), $CellContext`g$$ = $CellContext`x (
+          2 + $CellContext`y), $CellContext`showLocalBehavior$$ = 
+        True, $CellContext`showPhasePotrait$$ = True, $CellContext`xMax$$ = 
         5, $CellContext`xMin$$ = -5, $CellContext`yMax$$ = 
         5, $CellContext`yMin$$ = -5}, "ControllerVariables" :> {}, 
       "OtherVariables" :> {
@@ -1220,42 +1322,66 @@ $CellContext`conditionals$ = {};
                  Part[$CellContext`conditions$, $CellContext`i$], 2], 2], 
                2]}]]; Null]; Column[{
            If[$CellContext`showPhasePotrait$$, 
-            Column[{
-              Style["Phase Potrait", 18, Bold], 
-              StreamPlot[
-               $CellContext`F$[$CellContext`x, $CellContext`y], \
+            If[
+             Not[Length[$CellContext`conditionals$] == 0], 
+             Column[{
+               Style["Phase Potrait", 18, Bold], 
+               StreamPlot[
+                $CellContext`F$[$CellContext`x, $CellContext`y], \
 {$CellContext`x, $CellContext`xMin$$, $CellContext`xMax$$}, {$CellContext`y, \
 $CellContext`yMin$$, $CellContext`yMax$$}, StreamColorFunction -> "Rainbow", 
-               Axes -> True, AxesLabel -> {"x", "y"}, AxesStyle -> Gray, 
-               Frame -> False, StreamPoints -> Fine, ImageSize -> 72 5]}]], 
-           If[$CellContext`showSystem$$, 
-            Column[{
-              Style["System", 18, Bold], 
-              Row[{"The Entered System: ", 
-                
-                MatrixForm[{
-                 "\!\(\*TemplateBox[<|\"boxes\" -> \
+                Axes -> True, AxesLabel -> {"x", "y"}, AxesStyle -> Gray, 
+                Frame -> False, StreamPoints -> Fine, ImageSize -> 72 5]}], 
+             Column[{
+               Style["Phase Potrait", 18, Bold], 
+               StreamPlot[
+                $CellContext`F$[$CellContext`x, $CellContext`y], \
+{$CellContext`x, $CellContext`xMin$$, $CellContext`xMax$$}, {$CellContext`y, \
+$CellContext`yMin$$, $CellContext`yMax$$}, Epilog -> {
+                  RGBColor[255, 0, 0, 0.5], 
+                  PointSize[0.02], 
+                  Map[Tooltip[
+                    Point[{
+                    Part[
+                    Part[#, 1], 2], 
+                    Part[
+                    Part[#, 2], 2]}], "Fixed Point at (" <> ToString[
+                    Part[
+                    Part[#, 1], 2], FormatType -> StandardForm] <> "," <> 
+                    ToString[
+                    Part[
+                    Part[#, 2], 2], FormatType -> StandardForm] <> 
+                    ")"]& , $CellContext`fpList$]}, StreamColorFunction -> 
+                "Rainbow", Axes -> True, AxesLabel -> {"x", "y"}, AxesStyle -> 
+                Gray, Frame -> False, StreamPoints -> Fine, ImageSize -> 
+                72 5]}]]], 
+           Column[{
+             Style["System", 18, Bold], 
+             Row[{"The Entered System: ", 
+               
+               MatrixForm[{
+                "\!\(\*TemplateBox[<|\"boxes\" -> \
 FormBox[SuperscriptBox[StyleBox[\"x\", \"TI\"], \"\[Prime]\"], \
 TraditionalForm], \"errors\" -> {}, \"input\" -> \"x'\", \"state\" -> \"Boxes\
 \"|>,\"TeXAssistantTemplate\"]\)", 
-                  "\!\(\*TemplateBox[<|\"boxes\" -> \
+                 "\!\(\*TemplateBox[<|\"boxes\" -> \
 FormBox[SuperscriptBox[StyleBox[\"y\", \"TI\"], \"\[Prime]\"], \
 TraditionalForm], \"errors\" -> {}, \"input\" -> \"y'\", \"state\" -> \"Boxes\
 \"|>,\"TeXAssistantTemplate\"]\)"}], "=", 
-                
-                MatrixForm[{
-                 "\!\(\*TemplateBox[<|\"boxes\" -> \
+               
+               MatrixForm[{
+                "\!\(\*TemplateBox[<|\"boxes\" -> \
 FormBox[RowBox[{StyleBox[\"f\", \"TI\"], \"(\", RowBox[{StyleBox[\"x\", \
 \"TI\"], \",\", StyleBox[\"y\", \"TI\"]}], \")\"}], TraditionalForm], \
 \"errors\" -> {}, \"input\" -> \"f(x,y)\", \"state\" -> \
 \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 
-                  "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{StyleBox[\
-\"g\", \"TI\"], \"(\", RowBox[{StyleBox[\"x\", \"TI\"], \",\", \
-StyleBox[\"y\", \"TI\"]}], \")\"}], TraditionalForm], \"errors\" -> {}, \
-\"input\" -> \"g(x,y)\", \"state\" -> \
+                 "\!\(\*TemplateBox[<|\"boxes\" -> \
+FormBox[RowBox[{StyleBox[\"g\", \"TI\"], \"(\", RowBox[{StyleBox[\"x\", \
+\"TI\"], \",\", StyleBox[\"y\", \"TI\"]}], \")\"}], TraditionalForm], \
+\"errors\" -> {}, \"input\" -> \"g(x,y)\", \"state\" -> \
 \"Boxes\"|>,\"TeXAssistantTemplate\"]\)"}], "=", 
-                MatrixForm[
-                 $CellContext`F$[$CellContext`x, $CellContext`y]]}]}]], 
+               MatrixForm[
+                $CellContext`F$[$CellContext`x, $CellContext`y]]}]}], 
            Style["Jacobian", 18, Bold], 
            
            Row[{"The Jacobian of the system: ", 
@@ -1299,35 +1425,37 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[Element]\"}], TraditionalForm], \
                  Part[
                   Part[#, 2], 2], FormatType -> StandardForm] <> 
                ")"& , $CellContext`fpList$]}]], 
-           Style["Local Behavior", 18, Bold], 
-           Column[
-            Map[Column[{
-               Style["At the fixed points (" <> ToString[
-                  Part[
-                   Part[#, 1], 1], FormatType -> StandardForm] <> "," <> 
-                ToString[
-                  Part[
-                   Part[#, 1], 2], FormatType -> StandardForm] <> ")", Bold], 
-               Row[{"The Jacobian is", 
-                 Part[#, 2]}], 
-               Row[{"The Eigenvalues are ", 
-                 MatrixForm[
-                  Part[
-                   Part[
+           If[$CellContext`showLocalBehavior$$, 
+            Column[{
+              Style["Local Behavior", 18, Bold], 
+              Column[
+               Map[Column[{
+                  Style["At the fixed points (" <> ToString[
+                    Part[
+                    Part[#, 1], 1], FormatType -> StandardForm] <> "," <> 
+                   ToString[
+                    Part[
+                    Part[#, 1], 2], FormatType -> StandardForm] <> ")", Bold], 
+                  Row[{"The Jacobian is", 
+                    Part[#, 2]}], 
+                  Row[{"The Eigenvalues are ", 
+                    MatrixForm[
+                    Part[
+                    Part[
                     Part[#, 3], 1], 1]], " and ", 
-                 MatrixForm[
-                  Part[
-                   Part[
+                    MatrixForm[
+                    Part[
+                    Part[
                     Part[#, 3], 1], 2]]}], 
-               Row[{"The corresponding Eigenvectors are ", 
-                 MatrixForm[
-                  Part[
-                   Part[
+                  Row[{"The corresponding Eigenvectors are ", 
+                    MatrixForm[
+                    Part[
+                    Part[
                     Part[#, 3], 2], 1]], " and ", 
-                 MatrixForm[
-                  Part[
-                   Part[
-                    Part[#, 3], 2], 2]]}]}]& , $CellContext`systems$]]}]], 
+                    MatrixForm[
+                    Part[
+                    Part[
+                    Part[#, 3], 2], 2]]}]}]& , $CellContext`systems$]]}]]}]], 
       "Specifications" :> {
         Style["Dynamical System", Large, Bold], 
         Style[
@@ -1346,7 +1474,9 @@ FormBox[RowBox[{FractionBox[RowBox[{StyleBox[\"d\", \"TI\"], StyleBox[\"y\", \
 RowBox[{StyleBox[\"x\", \"TI\"], \",\", StyleBox[\"y\", \"TI\"]}], \")\"}]}], \
 TraditionalForm], \"errors\" -> {}, \"input\" -> \"\\\\frac{dy}{dt} = \
 g(x,y)\", \"state\" -> \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 
-         12], {{$CellContext`f$$, $CellContext`y, 
+         12], {{$CellContext`f$$, (
+           1 - $CellContext`x - $CellContext`y) (-$CellContext`x + \
+$CellContext`y), 
           Style[
           "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{StyleBox[\"f\", \
 \"TI\"], RowBox[{\"(\", RowBox[{StyleBox[\"x\", \"TI\"], \",\", \
@@ -1355,7 +1485,8 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[LongEqual]\"}], TraditionalForm], \
 \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 12]}, ControlType -> InputField, 
          ImageSize -> Small, ControlPlacement -> 
          1}, {$CellContext`showPhasePotrait$$, {True, False}, 
-         ControlPlacement -> 2}, {{$CellContext`g$$, (-5) Sin[$CellContext`x], 
+         ControlPlacement -> 
+         2}, {{$CellContext`g$$, $CellContext`x (2 + $CellContext`y), 
           Style[
           "\!\(\*TemplateBox[<|\"boxes\" -> FormBox[RowBox[{StyleBox[\"g\", \
 \"TI\"], RowBox[{\"(\", RowBox[{StyleBox[\"x\", \"TI\"], \",\", \
@@ -1363,8 +1494,8 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[LongEqual]\"}], TraditionalForm], \
 \"errors\" -> {}, \"input\" -> \"g(x,y)=\", \"state\" -> \
 \"Boxes\"|>,\"TeXAssistantTemplate\"]\)", 12]}, ControlType -> InputField, 
          ImageSize -> Small, ControlPlacement -> 
-         3}, {$CellContext`showSystem$$, {True, False}, ControlPlacement -> 
-         4}, 
+         3}, {$CellContext`showLocalBehavior$$, {True, False}, 
+         ControlPlacement -> 4}, 
         Grid[{{
            Manipulate`Place[1], 
            Manipulate`Place[2]}, {
@@ -1384,7 +1515,7 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[LongEqual]\"}], TraditionalForm], \
            Manipulate`Place[6]}, {
            Manipulate`Place[7], 
            Manipulate`Place[8]}}]}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{719., {734.134033203125, 739.865966796875}},
+     ImageSizeCache->{572., {622.134033203125, 627.865966796875}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1396,30 +1527,13 @@ StyleBox[\"y\", \"TI\"]}], \")\"}], \"\[LongEqual]\"}], TraditionalForm], \
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{
-  3.882396333994399*^9, 3.8823979700643454`*^9, 3.882398036708311*^9, 
-   3.8823982467475967`*^9, 3.8823984415005736`*^9, 3.882398582952943*^9, {
-   3.882398633960424*^9, 3.882398642844741*^9}, {3.882398708292748*^9, 
-   3.88239873330161*^9}, 3.882398770257543*^9, 3.8823988033617983`*^9, {
-   3.882398897711684*^9, 3.8823989636068487`*^9}, 3.882399006089602*^9, 
-   3.882399048752426*^9, {3.882399079622368*^9, 3.882399125875929*^9}, 
-   3.8823992598768787`*^9, {3.882399293016308*^9, 3.8823993265980034`*^9}, 
-   3.882399363470479*^9, 3.88239945802096*^9, 3.8823994931462603`*^9, 
-   3.882399538972061*^9, 3.882399721807601*^9, 3.882400017395424*^9, {
-   3.882400086413768*^9, 3.8824001234761333`*^9}, 3.8824009422010884`*^9, {
-   3.882401159058733*^9, 3.8824011631827*^9}, 3.882401217257794*^9, 
-   3.8824012511489477`*^9, 3.8824013707827873`*^9, 3.882401504952173*^9, 
-   3.888082863725762*^9, 3.888082895434206*^9, {3.8880842353731947`*^9, 
-   3.8880842541678944`*^9}, 3.8880843553075323`*^9, 3.8880844920521507`*^9, {
-   3.888084557046624*^9, 3.8880845854913588`*^9}, {3.8880846750518847`*^9, 
-   3.8880846990050015`*^9}, 3.888084771068477*^9, {3.8880849997463584`*^9, 
-   3.8880850239034977`*^9}, 3.8880851849663973`*^9, 3.888085273891391*^9, {
-   3.8880854120013433`*^9, 3.8880854333905277`*^9}, 3.888090369388547*^9, {
-   3.888090456230383*^9, 3.8880904679042892`*^9}, 3.888090576028817*^9, 
-   3.8880908807289224`*^9, 3.8880909599681187`*^9, 3.8880915050866103`*^9, 
-   3.8880917133026047`*^9, 3.888093948751401*^9, 3.888093989228157*^9, 
-   3.88809475987856*^9, 3.8880948041633997`*^9, 3.888094878064355*^9},
+  3.888098178926753*^9, {3.888098227874302*^9, 3.8880982504041758`*^9}, {
+   3.888098330340024*^9, 3.888098344089966*^9}, {3.888098471072536*^9, 
+   3.888098489229136*^9}, 3.888098530857421*^9, 3.8880985824926276`*^9, {
+   3.8880987049407806`*^9, 3.8880987549704823`*^9}, 3.8880988770590076`*^9, {
+   3.888099066927801*^9, 3.8880990802092223`*^9}, 3.8880993635468845`*^9},
  CellLabel->
-  "Out[726]=",ExpressionUUID->"b00d8901-cdef-49e9-bc73-c1515901361d"]
+  "Out[763]=",ExpressionUUID->"a5e705f9-ca9e-490e-b498-7531b7f75d18"]
 }, Open  ]]
 }, Open  ]],
 
@@ -5564,27 +5678,27 @@ Cell[10925, 289, 153, 3, 67, "Section",ExpressionUUID->"9efded44-15c8-43d3-a7a5-
 Cell[CellGroupData[{
 Cell[11103, 296, 177, 3, 54, "Subsection",ExpressionUUID->"4cd0ee05-51a4-4652-896f-1cbf8a108cf7"],
 Cell[CellGroupData[{
-Cell[11305, 303, 33688, 754, 1741, "Code",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
-Cell[44996, 1059, 18220, 362, 1493, "Output",ExpressionUUID->"b00d8901-cdef-49e9-bc73-c1515901361d"]
+Cell[11305, 303, 38800, 851, 1881, "Code",ExpressionUUID->"dcd5a536-0b2b-4220-b579-aa147c2ffa32"],
+Cell[50108, 1156, 18575, 379, 1269, "Output",ExpressionUUID->"a5e705f9-ca9e-490e-b498-7531b7f75d18"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[63265, 1427, 163, 3, 54, "Subsection",ExpressionUUID->"8db4dca2-4fee-42ba-880a-212cf85fa7df"],
+Cell[68732, 1541, 163, 3, 54, "Subsection",ExpressionUUID->"8db4dca2-4fee-42ba-880a-212cf85fa7df"],
 Cell[CellGroupData[{
-Cell[63453, 1434, 338, 6, 50, "Code",ExpressionUUID->"f31a03e1-f17a-47fe-a50f-518c2e78329c"],
-Cell[63794, 1442, 611, 12, 35, "Output",ExpressionUUID->"20f5fe6f-c1da-4294-9fef-ec1ab0fea3a0"]
+Cell[68920, 1548, 338, 6, 50, "Code",ExpressionUUID->"f31a03e1-f17a-47fe-a50f-518c2e78329c"],
+Cell[69261, 1556, 611, 12, 35, "Output",ExpressionUUID->"20f5fe6f-c1da-4294-9fef-ec1ab0fea3a0"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[64454, 1460, 156, 3, 54, "Subsection",ExpressionUUID->"9d3f931d-6834-49bd-adb3-735ddd428686"],
+Cell[69921, 1574, 156, 3, 54, "Subsection",ExpressionUUID->"9d3f931d-6834-49bd-adb3-735ddd428686"],
 Cell[CellGroupData[{
-Cell[64635, 1467, 3012, 80, 209, "Code",ExpressionUUID->"80f476f1-442b-4252-8e46-bedd1c3293c1"],
-Cell[67650, 1549, 200980, 3723, 447, "Output",ExpressionUUID->"ed414ecc-e910-43ad-b23b-ae4b4c68b9a2"]
+Cell[70102, 1581, 3012, 80, 209, "Code",ExpressionUUID->"80f476f1-442b-4252-8e46-bedd1c3293c1"],
+Cell[73117, 1663, 200980, 3723, 447, "Output",ExpressionUUID->"ed414ecc-e910-43ad-b23b-ae4b4c68b9a2"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[268667, 5277, 7608, 211, 324, "Code",ExpressionUUID->"98c5ebb8-8655-40e3-9c00-17c97b50168e"],
-Cell[276278, 5490, 420, 7, 32, "Output",ExpressionUUID->"5252c27d-460a-454a-8575-ca9a3de770f1"],
-Cell[276701, 5499, 948, 17, 35, "Output",ExpressionUUID->"48b9d710-11b8-48c2-bbba-8954074de1ae"]
+Cell[274134, 5391, 7608, 211, 324, "Code",ExpressionUUID->"98c5ebb8-8655-40e3-9c00-17c97b50168e"],
+Cell[281745, 5604, 420, 7, 32, "Output",ExpressionUUID->"5252c27d-460a-454a-8575-ca9a3de770f1"],
+Cell[282168, 5613, 948, 17, 35, "Output",ExpressionUUID->"48b9d710-11b8-48c2-bbba-8954074de1ae"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
